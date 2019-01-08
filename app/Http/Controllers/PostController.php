@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
 class PostController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('layout.admin');
+        $posts = Post::paginate(5);
+        return view('layout.admin', compact('posts'));
     }
 
     /**
@@ -23,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+            return view('admin.create');
     }
 
     /**
@@ -34,7 +35,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $posts = new Post();
+        $posts->title = $request->input('title');
+        $posts->decs = $request->input('decs');
+        $posts->content = $request->input('content');
+        $posts->id_user = $request->input('id_user');
+        $posts->save();
+
+        return redirect()->route('admin.index');
     }
 
     /**
