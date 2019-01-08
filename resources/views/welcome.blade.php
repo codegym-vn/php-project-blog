@@ -27,10 +27,27 @@
     @yield('content')
     <script>
         InlineEditor
-            .create( document.querySelector( '#editor' ) )
+            .create( document.querySelector( '#editor' ), {
+                image: {
+                    // You need to configure the image toolbar too, so it uses the new style buttons.
+                    toolbar: [ 'imageTextAlternative', '|', 'imageStyleAlignLeft', 'imageStyleFull', 'imageStyleAlignRight' ],
+
+                    styles: [
+                        // This option is equal to a situation where no style is applied.
+                        'imageStyleFull',
+
+                        // This represents an image aligned to left.
+                        'imageStyleAlignLeft',
+
+                        // This represents an image aligned to right.
+                        'imageStyleAlignRight'
+                    ]
+                }
+            } )
             .catch( error => {
                 console.error( error );
             } );
+
     </script>
     </body>
 </html>
