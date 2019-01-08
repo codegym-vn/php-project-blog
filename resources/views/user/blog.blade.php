@@ -5,10 +5,9 @@
     <!-- Bootstrap Boilerplate... -->
 
     <div class="panel-body">
-        <!-- Display Validation Errors -->
 
         <form action="{{ url('user.blog') }}" method="POST" class="form-horizontal">
-            {{ csrf_field() }}
+        {{ csrf_field() }}
 
             <div class="form-group">
                 <label for="blog" class="col-sm-3 control-label">Blog</label>
