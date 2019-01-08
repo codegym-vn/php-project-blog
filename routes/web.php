@@ -20,3 +20,9 @@ Route::group(['prefix' => 'admin'], function () {
    Route::get('/add', 'PostController@create')->name('admin.create');
    Route::post('/add', 'PostController@store')->name('admin.store');
 });
+
+Auth::routes();
+Route::group(['prefix' => 'home'],function () {
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/list', 'HomeController@list')->name('user.blog');
+});
