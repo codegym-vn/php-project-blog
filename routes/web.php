@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('test');
+});
+
+Route::group(['prefix' => 'admin'], function () {
+   Route::get('/', 'PostController@index')->name('admin.index');
+   Route::get('/add', 'PostController@create')->name('admin.create');
+   Route::post('/add', 'PostController@store')->name('admin.store');
 });
 
 Auth::routes();
