@@ -5,7 +5,6 @@
     <!-- Bootstrap Boilerplate... -->
 
     <div class="panel-body">
-        <!-- Display Validation Errors -->
 
         <form action="{{ url('user.blog') }}" method="POST" class="form-horizontal">
         {{ csrf_field() }}
