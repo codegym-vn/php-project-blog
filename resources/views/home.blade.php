@@ -19,5 +19,6 @@
             </div>
         </div>
     </div>
+    <a href="{{ route('user.blog') }}"><button class="btn btn-primary">List Blog</button></a>
 </div>
 @endsection
