@@ -23,8 +23,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/edit/{id}','PostController@update')->name('admin.post.update');
         Route::get('/destroy/{id}','PostController@destroy')->name('admin.post.destroy');
         Route::get('/','PostController@index')->name('admin.post.index');
+        Route::get('/view','PostController@view')->name('admin.post.view');
         Route::get('/{id}/show','PostController@show')->name('admin.post.show');
-
     });
 
 });

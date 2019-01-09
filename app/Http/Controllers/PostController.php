@@ -104,4 +104,8 @@ class PostController extends Controller
 
         return redirect()->route('admin.post.index');
     }
+    public function view()
+    {
+        return $this->view('admin.post.view');
+    }
 }
