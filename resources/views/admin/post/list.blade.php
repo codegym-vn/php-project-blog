@@ -16,6 +16,7 @@
                 <td>Title</td>
                 <td>Decs</td>
                 <td>Content</td>
+                <td>Image</td>
                 <td colspan="2">Action</td>
             </tr>
             </thead>
@@ -25,17 +26,15 @@
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{$post->decs}}</td>
-                    <td>{{$post->content}}</td>
+                    <td>{!!$post->content!!}</td>
                     <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a></td>
                     <td>
                         <a href="{{ route('admin.post.destroy',$post->id) }}" class="btn btn-danger">Delete</a>
-                        {{--<form>--}}
-                            {{--<a action="{{ route('admin.post.destroy', $post->id)}}"></a>--}}
-                            {{--@csrf--}}
-                            {{--@method('DELETE')--}}
-                            {{--<button class="btn btn-danger" type="submit">Delete</button>--}}
-                        {{--</form>--}}
                     </td>
+                    <td>
+                        <a href="{{ route('admin.post.show',$post->id) }}" class="btn btn-info">Show</a>
+                    </td>
+                    <td><img src="{{'/upload/images/' . $post->image}}" style="height: 130px; width:100px"></td>
                 </tr>
             @endforeach
             </tbody>
@@ -49,5 +48,6 @@
                 </a>
             </div>
         </div>
-        <div>
+    </div>
 @endsection
+
