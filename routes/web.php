@@ -12,17 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('test');
+    return view('welcome');
 });
-
-Route::group(['prefix' => 'admin'], function () {
-   Route::get('/', 'PostController@index')->name('admin.index');
-   Route::get('/add', 'PostController@create')->name('admin.create');
-   Route::post('/add', 'PostController@store')->name('admin.store');
-});
-
 Auth::routes();
-Route::group(['prefix' => 'home'],function () {
-    Route::get('/', 'HomeController@index')->name('home');
-    Route::get('/list', 'HomeController@list')->name('user.blog');
+Route::group(['prefix' => 'admin'], function () {
+    Route::group(['prefix' => 'posts'], function () {
+        Route::get('/create','PostController@create')->name('admin.post.create');
+        Route::post('/create','PostController@store')->name('admin.post.store');
+        Route::get('/edit/{id}','PostController@edit')->name('admin.post.edit');
+        Route::post('/edit/{id}','PostController@update')->name('admin.post.update');
+        Route::get('/destroy/{id}','PostController@destroy')->name('admin.post.destroy');
+        Route::get('/','PostController@index')->name('admin.post.index');
+
+    });
+
 });

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBlogPost;
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
+
 class PostController extends Controller
 {
     /**
@@ -15,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::paginate(5);
-        return view('layout.admin', compact('posts'));
+        return view('admin.post.index', compact('posts'));
     }
 
     /**
@@ -25,31 +27,31 @@ class PostController extends Controller
      */
     public function create()
     {
-            return view('admin.create');
+        return view('admin.post.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreBlogPost $request)
+    public function store(Request $request)
     {
         $posts = new Post();
         $posts->title = $request->input('title');
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
-        $posts->id_user = $request->input('id_user');
+        $posts->id_user = Auth::user()->id;
         $posts->save();
 
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.post.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -60,34 +62,45 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $posts = Post::findOrFail($id);
+        return view('admin.post.edit',compact('posts'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $posts = Post::findOrFail($id);
+        $posts->title = $request->input('title');
+        $posts->decs = $request->input('decs');
+        $posts->content = $request->input('content');
+        $posts->id_user = Auth::user()->id;
+        $posts->save();
+
+        return redirect()->route('admin.post.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        $posts = Post::findOrFail($id);
+        $posts->delete();
+
+        return redirect()->route('admin.post.index');
     }
 }
