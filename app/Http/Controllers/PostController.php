@@ -56,7 +56,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $posts = Post::findOrFail($id);
+        return view('admin.posts.show', compact('posts'));
     }
 
     /**
@@ -102,5 +103,9 @@ class PostController extends Controller
         $posts->delete();
 
         return redirect()->route('admin.post.index');
+    }
+    public function view()
+    {
+        return $this->view('admin.post.view');
     }
 }
