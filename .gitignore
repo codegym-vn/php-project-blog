@@ -6,6 +6,7 @@
 /.idea
 .env
 /.idea
+/views/admin/post/posts.blade.php
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
