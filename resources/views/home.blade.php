@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <a href="{{ route('user.blog') }}">
+        <a href="{{ route('admin.post.posts') }}">
             <button class="btn btn-primary">List Blog</button>
         </a>
     </div>

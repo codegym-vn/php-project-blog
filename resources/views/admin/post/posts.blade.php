@@ -26,10 +26,10 @@
                     <td>{{$blog->title}}</td>
                     <td>{{$blog->desc}}</td>
                     <td>{{$blog->content}}</td>
-                    <td><a href="{{ route('user.edit',$blog->id)}}" class="btn btn-primary">Edit</a></td>
+                    <td><a href="{{ route('admin.post.edit',$blog->id)}}" class="btn btn-primary">Edit</a></td>
                     <td>
                         <form>
-                            action="{{ route('user.destroy', $blog->id)}}" method="post">
+                            action="{{ route('admin.post.destroy', $blog->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit">Delete</button>
@@ -41,7 +41,7 @@
         </table>
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
-                <a href="{{ route('user.create') }}">
+                <a href="{{ route('admin.post.create') }}">
                     <button type="submit" class="btn btn-primary">
                         <i class="fa fa-plus"></i> Add Blog
                     </button>

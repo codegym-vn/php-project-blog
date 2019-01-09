@@ -23,7 +23,5 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/edit/{id}','PostController@update')->name('admin.post.update');
         Route::get('/destroy/{id}','PostController@destroy')->name('admin.post.destroy');
         Route::get('/','PostController@index')->name('admin.post.index');
-
     });
-
 });
