@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('page.home');
 });
 
 Route::group(['prefix' => 'admin'], function () {
@@ -25,4 +25,6 @@ Auth::routes();
 Route::group(['prefix' => 'home'],function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/list', 'HomeController@list')->name('user.blog');
+    Route::get('/add', 'PostController@index')->name('admin.index');
+
 });
