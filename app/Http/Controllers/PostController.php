@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\StoreBlogPost;
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +18,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::paginate(5);
-        return view('admin.post.index', compact('posts'));
+        return view('admin.post.list', compact('posts'));
     }
 
     /**
@@ -36,13 +37,21 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreBlogPost $request)
     {
         $posts = new Post();
         $posts->title = $request->input('title');
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
-        $posts->id_user = Auth::user()->id;
+        $posts->id_user = $request->input('id_user');
+        if($request->hasFile('image')) {
+            if($request->file('image')->isValid()) {
+                $image = $request->image;
+                $clientName = $image->getClientOriginalName();
+                $path = $image->move(public_path('upload/images'), $clientName);
+                $posts->image = $clientName;
+            }
+        }
         $posts->save();
 
         return redirect()->route('admin.post.index');
@@ -57,7 +66,7 @@ class PostController extends Controller
     public function show($id)
     {
         $posts = Post::findOrFail($id);
-        return view('admin.posts.show', compact('posts'));
+        return view('admin.post.show', compact('posts'));
     }
 
     /**
@@ -85,7 +94,15 @@ class PostController extends Controller
         $posts->title = $request->input('title');
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
-        $posts->id_user = Auth::user()->id;
+        $posts->id_user = $request->input('id_user');
+        if($request->hasFile('image')) {
+            if($request->file('image')->isValid()) {
+                $image = $request->image;
+                $clientName = $image->getClientOriginalName();
+                $path = $image->move(public_path('upload/images'), $clientName);
+                $posts->image = $clientName;
+            }
+        }
         $posts->save();
 
         return redirect()->route('admin.post.index');
@@ -106,6 +123,9 @@ class PostController extends Controller
     }
     public function view()
     {
-        return $this->view('admin.post.view');
+
+        return view('admin.post.view');
     }
+
+
 }
