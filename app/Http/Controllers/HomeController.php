@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,8 +27,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
     public function list()
     {
-        return view('user.blog');
+        $blogs = Blog::all();
+        return view('user.blog', compact('blogs'));
     }
 }
