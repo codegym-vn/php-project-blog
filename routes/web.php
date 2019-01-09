@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('blog');
 });
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {

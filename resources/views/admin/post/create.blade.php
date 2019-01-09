@@ -1,7 +1,6 @@
 @extends('welcome')
 @section('title', 'add new')
 @section('content')
-    <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
     <div class="col -12">
         <h1>ADD BLOG</h1>
     </div>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBlogPost;
+
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
