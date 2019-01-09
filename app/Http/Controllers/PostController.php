@@ -41,6 +41,7 @@ class PostController extends Controller
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
+
         $posts->save();
 
         return redirect()->route('admin.index');
@@ -88,6 +89,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $posts = Post::findOrFail($id);
+        $posts->delete();
+        return redirect()->route('admin.index');
     }
 }

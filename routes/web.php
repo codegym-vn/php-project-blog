@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin'], function () {
    Route::get('/', 'PostController@index')->name('admin.index');
    Route::get('/add', 'PostController@create')->name('admin.create');
    Route::post('/add', 'PostController@store')->name('admin.store');
+   Route::get('/{id}/destroy', 'PostController@destroy')->name('admin.destroys');
 });
 
 Auth::routes();
