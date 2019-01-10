@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('decs');
             $table->text('content');
             $table->string('image');
-            $table->string('id_user')->nullable();
+            $table->string('id_user')->nullable()   ;
             $table->timestamps();
         });
     }
