@@ -17,9 +17,9 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('decs');
-            $table->string('content');
+            $table->text('content');
             $table->string('image');
-            $table->string('id_user');
+            $table->string('id_user')->nullable();
             $table->timestamps();
         });
     }
