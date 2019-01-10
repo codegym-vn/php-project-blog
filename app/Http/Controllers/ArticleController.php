@@ -9,8 +9,10 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::all();
-        return response()->json(['data' => $articles]);
+        return Article::all();
+
+//        $articles = Article::all();
+//        return response()->json(['data' => $articles]);
     }
 
     public function show($id)
