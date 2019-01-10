@@ -7,8 +7,13 @@
         .uper {
             margin-top: 40px;
         }
+
+
     </style>
     <div class="uper">
+        <div class="container">
+            <div class="col-12">
+                <div class="row">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -16,6 +21,7 @@
                 <td>Title</td>
                 <td>Decs</td>
                 <td>Content</td>
+                <td>Image</td>
                 <td colspan="2">Action</td>
             </tr>
             </thead>
@@ -25,16 +31,14 @@
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{$post->decs}}</td>
-                    <td>{{$post->content}}</td>
+                    <td>{!!$post->content!!}</td>
+                    <td><img src="{{'/upload/images/' . $post->image}}" style="height: 150px; width:130px"></td>
+                    <td><a href="{{ route('admin.post.show',$post->id)}}" class="btn btn-success">Show</a></td>
+
                     <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a></td>
                     <td>
-                        <a href="{{ route('admin.post.destroy',$post->id) }}" class="btn btn-danger">Delete</a>
-                        {{--<form>--}}
-                            {{--<a action="{{ route('admin.post.destroy', $post->id)}}"></a>--}}
-                            {{--@csrf--}}
-                            {{--@method('DELETE')--}}
-                            {{--<button class="btn btn-danger" type="submit">Delete</button>--}}
-                        {{--</form>--}}
+                        <a href="{{ route('admin.post.destroy',$post->id) }}" class="btn btn-danger"
+                           onclick="return confirm('Bạn có muốn xoá')">Delete</a>
                     </td>
                 </tr>
             @endforeach
@@ -42,12 +46,17 @@
         </table>
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
+                <i class="icon ion-md-add"></i>
                 <a href="{{ route('admin.post.create') }}">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-plus"></i> Add Blog
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                        <i class="material-icons">add</i>
                     </button>
                 </a>
             </div>
+
         </div>
-        <div>
+    </div>
+        </div>
+        </div>
+    </div>
 @endsection
