@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('blog');
-});
+})->name('home');
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'posts'], function () {

@@ -16,10 +16,12 @@
                     <label>Description:</label>
                     <input type="text" class="form-control" name="decs" value="{{ $posts->decs }}">
                 </div>
+
                 <div class="form-group">
                     <label>Content:</label>
                     <input type="text" class="form-control" name="content" value="{!!$posts->content!!}">
                 </div>
+               
                 <div class="form-group">
                     @if ("/upload/images/{{ $posts->images }}")
                         <img src="{{ $posts->images }}">
