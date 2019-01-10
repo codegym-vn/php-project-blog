@@ -7,6 +7,7 @@ use App\Http\Requests\StoreBlogPost;
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class PostController extends Controller
 {
@@ -44,8 +45,8 @@ class PostController extends Controller
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
-        if($request->hasFile('image')) {
-            if($request->file('image')->isValid()) {
+        if ($request->hasFile('image')) {
+            if ($request->file('image')->isValid()) {
                 $image = $request->image;
                 $clientName = $image->getClientOriginalName();
                 $path = $image->move(public_path('upload/images'), $clientName);
@@ -53,7 +54,7 @@ class PostController extends Controller
             }
         }
         $posts->save();
-
+        Session::flash('success', 'Tạo mới khách hàng thành công');
         return redirect()->route('admin.post.index');
     }
 
@@ -78,7 +79,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $posts = Post::findOrFail($id);
-        return view('admin.post.edit',compact('posts'));
+        return view('admin.post.edit', compact('posts'));
     }
 
     /**
@@ -95,8 +96,8 @@ class PostController extends Controller
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
-        if($request->hasFile('image')) {
-            if($request->file('image')->isValid()) {
+        if ($request->hasFile('image')) {
+            if ($request->file('image')->isValid()) {
                 $image = $request->image;
                 $clientName = $image->getClientOriginalName();
                 $path = $image->move(public_path('upload/images'), $clientName);
@@ -104,7 +105,7 @@ class PostController extends Controller
             }
         }
         $posts->save();
-
+        Session::flash('success', 'Cập nhật khách hàng thành công');
         return redirect()->route('admin.post.index');
     }
 
@@ -118,13 +119,24 @@ class PostController extends Controller
     {
         $posts = Post::findOrFail($id);
         $posts->delete();
-
+        Session::flash('success', 'Xóa khách hàng thành công');
         return redirect()->route('admin.post.index');
     }
+
     public function view()
     {
 
         return view('admin.post.view');
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        if (!$keyword) {
+            return redirect()->route('admin.post.index');
+        }
+        $posts = Post::where('title', 'LIKE', '%' . $keyword . '%')->paginate(5);
+        return view('admin.post.list', compact('posts'));
     }
 
 

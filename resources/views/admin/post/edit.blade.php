@@ -16,12 +16,10 @@
                     <label>Description:</label>
                     <input type="text" class="form-control" name="decs" value="{{ $posts->decs }}">
                 </div>
-                <textarea name="content" id="editor">
                 <div class="form-group">
                     <label>Content:</label>
-                    <input type="text" class="form-control" name="content" value="{!! $posts->content !!}    ">
+                    <input type="text" class="form-control" name="content" value="{!!$posts->content!!}">
                 </div>
-                </textarea>
                 <div class="form-group">
                     @if ("/upload/images/{{ $posts->images }}")
                         <img src="{{ $posts->images }}">
