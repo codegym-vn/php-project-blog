@@ -11,6 +11,9 @@
 
     </style>
     <div class="uper">
+        <div class="container">
+            <div class="col-12">
+                <div class="row">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -28,13 +31,14 @@
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{$post->decs}}</td>
-                    <td>{!! $post->content !!}</td>
-                    <td><img src="{{'/upload/images/' . $post->image}}" style="height: 130px; width:100px"></td>
+                    <td>{!!$post->content!!}</td>
+                    <td><img src="{{'/upload/images/' . $post->image}}" style="height: 150px; width:130px"></td>
                     <td><a href="{{ route('admin.post.show',$post->id)}}" class="btn btn-success">Show</a></td>
 
                     <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a></td>
                     <td>
-                        <a href="{{ route('admin.post.destroy',$post->id) }}" class="btn btn-danger">Delete</a>
+                        <a href="{{ route('admin.post.destroy',$post->id) }}" class="btn btn-danger"
+                           onclick="return confirm('Bạn có muốn xoá')">Delete</a>
                     </td>
                 </tr>
             @endforeach
@@ -52,7 +56,7 @@
 
         </div>
     </div>
-
-
-
+        </div>
+        </div>
+    </div>
 @endsection
