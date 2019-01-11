@@ -16,10 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', 'ArticleController@index');
-    Route::get('/{id}', 'ArticleController@show');
-    Route::post('/', 'ArticleController@store');
-    Route::put('/{id}', 'ArticleController@update');
-    Route::delete('/{id}', 'ArticleController@delete');
-});
+
+    Route::get('/post', 'PostApiController@index');
+    Route::get('post/{id}', 'PostApiController@show');
+    Route::post('post', 'PostApiController@store');
+    Route::put('post/{id}', 'PostApiController@update');
+    Route::delete('post/{id}', 'PostApiController@delete');
