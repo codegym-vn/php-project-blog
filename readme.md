@@ -1,15 +1,15 @@
-##Các bước khởi chạy
-###nstall composer
+## Các bước khởi chạy
+### nstall composer
 ```composer install```
 
-###Tạo file .env và kết nối database
+### Tạo file .env và kết nối database
 ```cp .env.example .env```
 
-###Tạo key
+### Tạo key
 ```php artisan key:generate```
 
-###Tạo storage link
+### Tạo storage link
 ```php artisan storage:link```
 
-###Chạy laravel
+### Chạy laravel
 ```php artisan serve```
