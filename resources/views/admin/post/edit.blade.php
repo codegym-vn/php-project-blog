@@ -2,7 +2,7 @@
 @section('content')
     <div class="card-uper">
         <div class="card-header">
-            Edit Blog
+             <h1>EDIT BLOG</h1>
         </div>
         <div class="card-body">
 
