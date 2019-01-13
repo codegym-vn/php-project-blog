@@ -58,9 +58,6 @@
                     </div>
                 </div>
             </div>
-            <div class="pagination float-lg-right">
-                {{ $posts->links() }}
-            </div>
         </div>
     </div>
 @endsection

@@ -29,7 +29,7 @@
         <div class="card-body">
             <h1 class="display-4">Welcome To The BLog!</h1>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="{{route('admin.post.index')}}" class="btn btn-primary">Go Blog</a>
+            <a href="http://localhost:4200/post" class="btn btn-primary">Go Blog</a>
         </div>
         <div class="card-body">
             <a href="#" class="btn btn-success">Sign up</a>
