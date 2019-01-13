@@ -14,21 +14,21 @@ class UserTableSeeder extends Seeder
         $user = new \App\User();
         $user->id = 2;
         $user->name = 'Tran Dung';
-        $user->email = 'Durotan@gamil.com';
+        $user->email = 'Durotan@gmail.com';
         $user->password = '123456';
         $user->save();
 
         $user = new \App\User();
         $user->id = 3;
         $user->name = 'Phi Diep';
-        $user->email = 'Durotan1@gamil.com';
+        $user->email = 'Durotan1@gmail.com';
         $user->password = '123456';
         $user->save();
 
         $user = new \App\User();
         $user->id = 4;
         $user->name = 'Le Trinh';
-        $user->email = 'Durotan2@gamil.com';
+        $user->email = 'Durotan2@gmail.com';
         $user->password = '123456';
         $user->save();
     }

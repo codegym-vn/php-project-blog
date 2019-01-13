@@ -4,13 +4,13 @@
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-interval="10000">
-                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(90).jpg"
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(67).jpg"
                      alt="First slide"></div>
             <div class="carousel-item" data-interval="2000">
-                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(60).jpg"
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
                      alt="First slide"></div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(60).jpg"
                      alt="First slide"></div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -29,7 +29,7 @@
         <div class="card-body">
             <h1 class="display-4">Welcome To The BLog!</h1>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="{{route('admin.post.index')}}" class="btn btn-primary">Go Blog</a>
+            <a href="http://localhost:4200/post" class="btn btn-primary">Go Blog</a>
         </div>
         <div class="card-body">
             <a href="#" class="btn btn-success">Sign up</a>

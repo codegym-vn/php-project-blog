@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -28,7 +29,8 @@
 <div class="container">
     <div class="col-12">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Blog</a>
+            <a class="navbar-brand" href="{{route('home')}}">Blog</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,7 +61,8 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" action="{{route('admin.post.search')}}" method="get">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                           name="keyword">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
@@ -100,13 +103,11 @@
                 </ul>
             </div>
         </nav>
-
-
         <main class="py-4">
-                @yield('content')
-            </main>
-        </div>
+            @yield('content')
+        </main>
     </div>
+</div>
 </div>
 </body>
 </html>
