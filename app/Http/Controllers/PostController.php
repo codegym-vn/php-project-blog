@@ -46,12 +46,9 @@ class PostController extends Controller
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
         if ($request->hasFile('image')) {
-            if ($request->file('image')->isValid()) {
-                $image = $request->image;
-                $clientName = $image->getClientOriginalName();
-                $path = $image->move(public_path('upload/images'), $clientName);
-                $posts->image = $clientName;
-            }
+            $image = $request->image;
+            $path = $image->store('images', 'public');
+            $posts->image = $path;
         }
         $posts->save();
         Session::flash('success', 'Tạo mới khách hàng thành công');
@@ -97,12 +94,9 @@ class PostController extends Controller
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
         if ($request->hasFile('image')) {
-            if ($request->file('image')->isValid()) {
-                $image = $request->image;
-                $clientName = $image->getClientOriginalName();
-                $path = $image->move(public_path('upload/images'), $clientName);
-                $posts->image = $clientName;
-            }
+            $image = $request->image;
+            $path = $image->store('images', 'public');
+            $posts->image = $path;
         }
         $posts->save();
         Session::flash('success', 'Cập nhật khách hàng thành công');

@@ -11,7 +11,7 @@
         <hr class="my-4">
         <p>{!! $posts->content !!}</p>
         <div class="text-center">
-            <img src="{{'/upload/images/' . $posts->image}}" class="rounded" alt="image blog"
+            <img src="{{asset('storage/' . $posts->image)}}" class="rounded" alt="image blog"
                  style="height: 200px; width:300px">
         </div>
     </div>
