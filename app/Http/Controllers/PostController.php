@@ -117,10 +117,10 @@ class PostController extends Controller
         return redirect()->route('admin.post.index');
     }
 
-    public function view()
+    public function list()
     {
-
-        return view('admin.post.view');
+        $posts = new Post();
+        return redirect()->route('admin.post.index', compact($posts));
     }
 
     public function search(Request $request)

@@ -40,7 +40,7 @@
                                 </td>
                                 <td>
                                     <a href="{{ route('admin.post.destroy',$post->id) }}" class="btn btn-danger"
-                                       onclick="return confirm('Bạn có muốn xoá')">Delete</a>
+                                       onclick="return confirm('Bạn có muốn xoá ? ')">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
