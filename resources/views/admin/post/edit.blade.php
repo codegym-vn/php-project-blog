@@ -13,7 +13,7 @@
                     <input type="text" class="form-control" name="title" value="{{ $posts->title }}">
                 </div>
                 <div class="form-group">
-                    <label>Description:</label>
+                    <label>Summary:</label>
                     <input type="text" class="form-control" name="decs" value="{{ $posts->decs }}">
                 </div>
                 <textarea name="content" id="editor">

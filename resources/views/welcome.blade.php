@@ -36,7 +36,12 @@
 
 <script>
     ClassicEditor
-        .create(document.querySelector('#editor'))
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                // eslint-disable-next-line max-len
+                uploadUrl: 'https://cksource.com/weuy2g4ryt278ywiue/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+            }
+        })
         .catch(error => {
             console.error(error);
         });
