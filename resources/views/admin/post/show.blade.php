@@ -5,8 +5,7 @@
     </button>
 
     <div class="jumbotron">
-        <p>{{$posts->id}}</p>
-        <h1 class="display-4">{{$posts->title}}</h1>
+        <p class="display-4"><h1 style="color: navy">{{$posts->id}} : {{$posts->title}}</h1></p>
         <p class="lead">{{$posts->decs}}</p>
         <hr class="my-4">
         <p>{!! $posts->content !!}</p>
