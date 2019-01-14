@@ -19,7 +19,7 @@
                             <td>ID</td>
                             <td>Title</td>
                             <td>Decs</td>
-                            <td>Content</td>
+                            {{--<td>Content</td>--}}
                             <td>Image</td>
                             <td colspan="3">Action</td>
                         </tr>
@@ -30,7 +30,7 @@
                                 <td>{{$post->id}}</td>
                                 <td>{{$post->title}}</td>
                                 <td>{{$post->decs}}</td>
-                                <td>{!!$post->content!!}</td>
+                                {{--<td>{!!$post->content!!}</td>--}}
                                 <td><img src="{{asset('storage/'. $post->image)}}" style="height: 150px; width:130px">
                                 </td>
                                 <td><a href="{{ route('admin.post.show',$post->id)}}" class="btn btn-success">Show</a>
