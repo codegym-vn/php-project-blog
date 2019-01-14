@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -28,7 +27,8 @@
 <body>
 <div class="container">
     <div class="col-12-md">
-        <nav class="navbar navbar-expand-lg navbar-light flex-column flex-md-row bd-navbar sticky-top" style="background: powderblue">
+        <nav class="navbar navbar-expand-lg navbar-light flex-column flex-md-row bd-navbar sticky-top"
+             style="background: powderblue">
             <a class="navbar-brand" href="{{route('home')}}">Blog</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -50,7 +50,6 @@
                             Menu
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-{{--                            <a class="dropdown-item" href="{{route('admin.post.view')}}">View Blog</a>--}}
                             <a class="dropdown-item" href="#"></a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"></a>
