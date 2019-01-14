@@ -32,7 +32,11 @@
             <a href="http://localhost:4200/post" class="btn btn-primary">Go Blog</a>
         </div>
         <div class="card-body">
+<<<<<<< HEAD
             <a href="{{ route('admin.post.list') }}" class="btn btn-success">My Blog</a>
+=======
+            <a href="#" class="btn btn-success">My Blog</a>
+>>>>>>> e2ffc4c7f199b8a45dcc1ab2f1784a8d7c9d273d
         </div>
         <div class="card-footer text-muted">
             BY TEAM WFC
