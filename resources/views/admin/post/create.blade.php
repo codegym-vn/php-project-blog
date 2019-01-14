@@ -20,9 +20,10 @@
                 <p class="help is-danger" style="color:red; ">{{$errors->first('decs')}}</p>
             @endif
         </div>
+
+        <label>Content</label>
         <textarea name="content" id="editor">
             <div class="form-group">
-                <label>Content</label>
                 <input name="content" class="form-control">
                 @if($errors ->has('content'))
                     <p class="help is-danger" style="color:red; ">{{$errors->first('content')}}</p>
@@ -34,6 +35,6 @@
             <input type="file" class="form-control-file" name="image">
         </div>
         <button type="submit" class="btn btn-primary">Thêm mới</button>
-        <a href="{{route('admin.post.index')}}" class="btn btn-primary">Cancel</a>
+        <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
     </form>
 @endsection
