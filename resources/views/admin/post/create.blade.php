@@ -31,14 +31,7 @@
             </div>
         </textarea>
         <div class="form-group">
-            <label>Due Date</label>
-            <input name="due_date" class="form-control" placeholder="due date">
-            @if($errors ->has('due_date'))
-                <p class="help is-danger" style="color:red; ">{{$errors->first('due_date')}}</p>
-            @endif
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Image</label>
+            <label for="exampleFormControlFile1">Avatar</label>
             <input type="file" class="form-control-file" name="image">
         </div>
         <button type="submit" class="btn btn-primary">Thêm mới</button>

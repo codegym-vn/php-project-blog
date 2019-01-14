@@ -12,7 +12,7 @@
         <div class="container">
             <div class="col-12">
                 <h1>My Blog</h1>
-                <div class="form-group">
+                <div class="form-group sticky-top">
                     <div class="d-flex flex-row-reverse bd-highlight">
                         <i class="icon ion-md-add"></i>
                         <a href="{{ route('admin.post.create') }}">
@@ -27,10 +27,9 @@
                         <thead style="background: #6cb2eb">
                         <tr class="text-center" style="font-size: 20px">
                             <td>Title</td>
-                            <td>Decs</td>
-                            <td>Due Date</td>
+                            <td>Summary</td>
                             <td>Created</td>
-                            <td>Image</td>
+                            <td>Avatar</td>
                             <td colspan="3">Action</td>
                         </tr>
                         </thead>
@@ -39,9 +38,7 @@
                             <tr>
                                 <td>{{$post->title}}</td>
                                 <td>{{$post->decs}}</td>
-                                <td>{{$post->due_date}}</td>
                                 <td>{{$post->created_at}}</td>
-                                {{--<td>{!!$post->content!!}</td>--}}
                                 <td><img src="{{asset('storage/'. $post->image)}}" style="height: 150px; width:130px">
                                 </td>
                                 <td><a href="{{ route('admin.post.show',$post->id)}}" class="btn btn-success">Show</a>
@@ -57,16 +54,6 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-6">
-                            <i class="icon ion-md-add"></i>
-                            <a href="{{ route('admin.post.create') }}">
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-                                    <i class="material-icons">add</i>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
                     <div class="col-6">
                         <div class="pagination float-lg-right">{{$posts->links()}}</div>
                     </div>

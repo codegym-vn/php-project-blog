@@ -13,7 +13,7 @@
                     <input type="text" class="form-control" name="title" value="{{ $posts->title }}">
                 </div>
                 <div class="form-group">
-                    <label>Description:</label>
+                    <label>Summary:</label>
                     <input type="text" class="form-control" name="decs" value="{{ $posts->decs }}">
                 </div>
                 <textarea name="content" id="editor">
@@ -22,10 +22,6 @@
                     <input type="text" class="form-control" name="content" value="{!!$posts->content!!}">
                 </div>
                 </textarea>
-                <div class="form-group">
-                    <label>Due Date</label>
-                    <input name="title" class="form-control" placeholder="due date">
-                </div>
                 <div class="form-group">
                     @if ("/upload/images/{{ $posts->images }}")
                         <img src="{{ $posts->images }}">
