@@ -11,8 +11,7 @@
         <hr class="my-4">
         <p>{!! $posts->content !!}</p>
         <div class="text-center">
-            <img src="{{'/upload/images/' . $posts->image}}" class="rounded" alt="image blog"
-                 style="height: 200px; width:300px">
+            <img src="{{ asset('storage/'. $posts->image) }}" style="height: 500px; width:600px" class="rounded" alt="image blog">
         </div>
     </div>
     <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
