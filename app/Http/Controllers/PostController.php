@@ -31,13 +31,14 @@ class PostController extends Controller
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
+        $posts->due_date = $request->input('due_date');
         if ($request->hasFile('image')) {
             $image = $request->image;
             $path = $image->store('images', 'public');
             $posts->image = $path;
         }
         $posts->save();
-        Session::flash('success', 'Tạo mới khách hàng thành công');
+        Session::flash('success', 'them moi thành công');
         return redirect()->route('admin.post.index');
     }
 
@@ -63,6 +64,7 @@ class PostController extends Controller
         $posts->decs = $request->input('decs');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
+        $posts->due_date = $request->input('due_date');
         if ($request->hasFile('image')) {
             $image = $request->image;
             $path = $image->store('images', 'public');

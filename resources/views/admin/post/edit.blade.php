@@ -2,7 +2,7 @@
 @section('content')
     <div class="card-uper">
         <div class="card-header">
-             <h1>EDIT BLOG</h1>
+             <h1>EDIT POST</h1>
         </div>
         <div class="card-body">
 
@@ -16,9 +16,15 @@
                     <label>Description:</label>
                     <input type="text" class="form-control" name="decs" value="{{ $posts->decs }}">
                 </div>
+                <textarea name="content" id="editor">
                 <div class="form-group">
                     <label>Content:</label>
                     <input type="text" class="form-control" name="content" value="{!!$posts->content!!}">
+                </div>
+                </textarea>
+                <div class="form-group">
+                    <label>Due Date</label>
+                    <input name="title" class="form-control" placeholder="due date">
                 </div>
                 <div class="form-group">
                     @if ("/upload/images/{{ $posts->images }}")
