@@ -38,9 +38,5 @@
             BY TEAM WFC
         </div>
     </div>
-<<<<<<< HEAD
 @endsection
-=======
 
-@endsection
->>>>>>> da59008903a70a418ed2faa451309fdcb122d456

@@ -11,6 +11,7 @@ class PostApiController extends Controller
     {
         return Post::get();
     }
+
     public function store(Request $request) {
         $post = new Post();
         $post->title = $request->title;
@@ -19,14 +20,17 @@ class PostApiController extends Controller
         $post->content = $request->input('content');
         $post->save();
     }
+
     public function show($id) {
         return Post::findOrFail($id);
     }
+
     public function update(Request $request, $id) {
        $post = Post::findOrFail($id);
        $post->update($request->all());
        return $post;
     }
+
     public function destroy($id) {
         if($id != null) {
             $post = Post::findOrFail($id);
