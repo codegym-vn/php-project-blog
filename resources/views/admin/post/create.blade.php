@@ -31,7 +31,7 @@
             </div>
         </textarea>
         <div class="form-group">
-            <label for="exampleFormControlFile1">Image</label>
+            <label for="exampleFormControlFile1">Avatar</label>
             <input type="file" class="form-control-file" name="image">
         </div>
         <button type="submit" class="btn btn-primary">Thêm mới</button>

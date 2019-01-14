@@ -29,7 +29,7 @@
                             <td>Title</td>
                             <td>Summary</td>
                             <td>Created</td>
-                            <td>Image</td>
+                            <td>Avatar</td>
                             <td colspan="3">Action</td>
                         </tr>
                         </thead>

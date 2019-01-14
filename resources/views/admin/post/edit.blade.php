@@ -23,10 +23,6 @@
                 </div>
                 </textarea>
                 <div class="form-group">
-                    <label>Due Date</label>
-                    <input name="title" class="form-control" placeholder="due date">
-                </div>
-                <div class="form-group">
                     @if ("/upload/images/{{ $posts->images }}")
                         <img src="{{ $posts->images }}">
                     @else
