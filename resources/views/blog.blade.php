@@ -37,7 +37,6 @@
         <div class="card-footer text-muted">
             BY TEAM WFC
         </div>
-
     </div>
-
 @endsection
+

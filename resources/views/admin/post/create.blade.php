@@ -2,7 +2,7 @@
 @section('title', 'add new')
 @section('content')
     <div class="col -12">
-        <h1>ADD BLOG</h1>
+        <h1>CREATE POST</h1>
     </div>
     <form method="post" action="{{route('admin.post.store')}}" enctype="multipart/form-data">
         @csrf
@@ -14,8 +14,8 @@
             @endif
         </div>
         <div class="form-group">
-            <label>Decs</label>
-            <input name="decs" class="form-control" placeholder="decs">
+            <label>Summary</label>
+            <input name="decs" class="form-control" placeholder="summary">
             @if($errors ->has('decs'))
                 <p class="help is-danger" style="color:red; ">{{$errors->first('decs')}}</p>
             @endif
@@ -30,6 +30,13 @@
                 @endif
             </div>
         </textarea>
+        <div class="form-group">
+            <label>Due Date</label>
+            <input name="due_date" class="form-control" placeholder="due date">
+            @if($errors ->has('due_date'))
+                <p class="help is-danger" style="color:red; ">{{$errors->first('due_date')}}</p>
+            @endif
+        </div>
         <div class="form-group">
             <label for="exampleFormControlFile1">Image</label>
             <input type="file" class="form-control-file" name="image">

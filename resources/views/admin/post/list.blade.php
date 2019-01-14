@@ -12,14 +12,24 @@
         <div class="container">
             <div class="col-12">
                 <h1>My Blog</h1>
+                <div class="form-group">
+                    <div class="d-flex flex-row-reverse bd-highlight">
+                        <i class="icon ion-md-add"></i>
+                        <a href="{{ route('admin.post.create') }}">
+                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                <i class="material-icons">add</i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
                 <div class="row">
                     <table class="col-12 table table-striped">
                         <thead style="background: #6cb2eb">
                         <tr class="text-center" style="font-size: 20px">
-                            <td>ID</td>
                             <td>Title</td>
                             <td>Decs</td>
-                            {{--<td>Content</td>--}}
+                            <td>Due Date</td>
+                            <td>Created</td>
                             <td>Image</td>
                             <td colspan="3">Action</td>
                         </tr>
@@ -27,9 +37,10 @@
                         <tbody>
                         @foreach($posts as $post)
                             <tr>
-                                <td>{{$post->id}}</td>
                                 <td>{{$post->title}}</td>
                                 <td>{{$post->decs}}</td>
+                                <td>{{$post->due_date}}</td>
+                                <td>{{$post->created_at}}</td>
                                 {{--<td>{!!$post->content!!}</td>--}}
                                 <td><img src="{{asset('storage/'. $post->image)}}" style="height: 150px; width:130px">
                                 </td>
