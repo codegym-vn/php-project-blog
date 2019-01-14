@@ -13,15 +13,15 @@
             <div class="col-12">
                 <h1>My Blog</h1>
                 <div class="row">
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
+                    <table class="col-12 table table-striped">
+                        <thead style="background: #6cb2eb">
+                        <tr class="text-center" style="font-size: 20px">
                             <td>ID</td>
                             <td>Title</td>
                             <td>Decs</td>
                             <td>Content</td>
                             <td>Image</td>
-                            <td colspan="2">Action</td>
+                            <td colspan="3">Action</td>
                         </tr>
                         </thead>
                         <tbody>
