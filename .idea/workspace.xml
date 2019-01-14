@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="9219cb5f-a517-4b75-a0ba-7e2a428877df" name="Default Changelist" comment="" />
+=======
     <list default="true" id="9219cb5f-a517-4b75-a0ba-7e2a428877df" name="Default Changelist" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,6 +38,7 @@
 >>>>>>> c1b086374560d0826a9998e3ce18be6bcf9cb506
 >>>>>>> b7d6410c71581687e717324ac33f765bc0f1364c
     </list>
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +62,8 @@
     <expand />
     <select />
   </component>
+<<<<<<< HEAD
+=======
   <component name="FUSProjectUsageTrigger">
     <session id="-337724352">
       <usages-collector id="statistics.lifecycle.project">
@@ -94,6 +100,7 @@
       </usages-collector>
     </session>
   </component>
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< HEAD
@@ -104,6 +111,12 @@
               <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
 =======
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="17" column="27" selection-start-line="17" selection-end-line="18" />
+=======
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -178,6 +191,7 @@
 >>>>>>> 09a2972b6a87f5438f940c26f0116f0a444a1301
 >>>>>>> c1b086374560d0826a9998e3ce18be6bcf9cb506
 >>>>>>> b7d6410c71581687e717324ac33f765bc0f1364c
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
             </state>
           </provider>
         </entry>
@@ -194,6 +208,12 @@
 >>>>>>> b7d6410c71581687e717324ac33f765bc0f1364c
 =======
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+=======
 <<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -277,6 +297,7 @@
               <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
 >>>>>>> 09a2972b6a87f5438f940c26f0116f0a444a1301
 >>>>>>> b7d6410c71581687e717324ac33f765bc0f1364c
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
             </state>
           </provider>
         </entry>
@@ -462,6 +483,8 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -473,6 +496,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
   <component name="PhpServers">
     <servers />
   </component>
@@ -693,17 +717,19 @@
               <item name="php-project-blog" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php-project-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php-project-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php-project-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="php-project-blog" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php-project-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php-project-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -796,6 +822,9 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+    <option name="totallyTimeSpent" value="44605000" />
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="22064000" />
   </component>
@@ -811,6 +840,7 @@
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="45904000" />
 >>>>>>> b7d6410c71581687e717324ac33f765bc0f1364c
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -863,6 +893,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
 <<<<<<< HEAD
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.023942538" />
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.03405221" />
 =======
@@ -874,6 +907,7 @@
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.021459227" />
 >>>>>>> 09a2972b6a87f5438f940c26f0116f0a444a1301
 >>>>>>> b7d6410c71581687e717324ac33f765bc0f1364c
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17797287" />
@@ -900,9 +934,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/views/test.html" />
@@ -1363,6 +1394,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="120">
+          <caret line="17" column="27" selection-start-line="17" selection-end-line="18" />
+=======
         <state relative-caret-position="315">
           <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
         </state>
@@ -1375,6 +1410,7 @@
 =======
         <state relative-caret-position="105">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+>>>>>>> 51010edc8c33350a9e1113a6300b222e270374ac
         </state>
       </provider>
     </entry>

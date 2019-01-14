@@ -11,7 +11,11 @@
         <hr class="my-4">
         <p>{!! $posts->content !!}</p>
         <div class="text-center">
+<<<<<<< HEAD
+            <img src="{{ asset('storage/'. $posts->image) }}" style="height: 500px; width:600px" class="rounded" alt="image blog">
+=======
             <td><img src="{{asset('storage/'. $posts->image)}}" style="height: 500px; width:600px">
+>>>>>>> e2ffc4c7f199b8a45dcc1ab2f1784a8d7c9d273d
         </div>
     </div>
     <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>

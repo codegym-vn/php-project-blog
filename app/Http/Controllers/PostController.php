@@ -18,7 +18,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::paginate(3);
         return view('admin.post.list', compact('posts'));
     }
 
@@ -117,10 +117,10 @@ class PostController extends Controller
         return redirect()->route('admin.post.index');
     }
 
-    public function view()
+    public function list()
     {
-
-        return view('admin.post.view');
+        $posts = new Post();
+        return redirect()->route('admin.post.index', compact($posts));
     }
 
     public function search(Request $request)
@@ -129,7 +129,7 @@ class PostController extends Controller
         if (!$keyword) {
             return redirect()->route('admin.post.index');
         }
-        $posts = Post::where('title', 'LIKE', '%' . $keyword . '%')->paginate(5);
+        $posts = Post::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
         return view('admin.post.list', compact('posts'));
     }
 
