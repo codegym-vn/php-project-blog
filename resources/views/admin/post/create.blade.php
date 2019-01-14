@@ -16,6 +16,9 @@
         <div class="form-group">
             <label>Decs</label>
             <input name="decs" class="form-control" placeholder="decs">
+            @if($errors ->has('decs'))
+                <p class="help is-danger" style="color:red; ">{{$errors->first('decs')}}</p>
+            @endif
         </div>
         <textarea name="content" id="editor">
             <div class="form-group">
@@ -31,6 +34,6 @@
             <input type="file" class="form-control-file" name="image">
         </div>
         <button type="submit" class="btn btn-primary">Thêm mới</button>
-        <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
+        <a href="{{route('admin.post.index')}}" class="btn btn-primary">Cancel</a>
     </form>
 @endsection
