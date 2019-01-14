@@ -27,8 +27,8 @@
 </head>
 <body>
 <div class="container">
-    <div class="col-12">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="col-12-md">
+        <nav class="navbar navbar-expand-lg navbar-light flex-column flex-md-row bd-navbar sticky-top" style="background: powderblue">
             <a class="navbar-brand" href="{{route('home')}}">Blog</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -57,7 +57,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" action="{{route('admin.post.search')}}" method="get">
