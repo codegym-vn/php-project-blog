@@ -11,7 +11,8 @@
         <hr class="my-4">
         <p>{!! $posts->content !!}</p>
         <div class="text-center">
-            <img src="{{ asset('storage/'. $posts->image) }}" style="height: 500px; width:600px" class="rounded" alt="image blog">
+            <img src="{{ asset('storage/'. $posts->image) }}" style="height: 500px; width:600px" class="rounded"
+                 alt="image blog">
         </div>
     </div>
     <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
