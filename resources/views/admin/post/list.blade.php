@@ -56,8 +56,13 @@
                             </a>
                         </div>
                     </div>
+                    <div class="col-6">
+                        <div class="pagination float-lg-right">{{$posts->links()}}</div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+
 @endsection

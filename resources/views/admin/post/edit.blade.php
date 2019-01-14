@@ -29,7 +29,7 @@
                     image <input type="file" name="image" value="{{ $posts->images }}"/>
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
-                <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
+                <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
 
             </form>
         </div>
