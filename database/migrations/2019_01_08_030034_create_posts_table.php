@@ -12,9 +12,9 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('decs');
+            $table->string('desc');
             $table->text('content');
-            $table->string('image');
+            $table->longText('image');
             $table->string('id_user')->nullable();
             $table->timestamps();
         });

@@ -37,9 +37,10 @@
                         @foreach($posts as $post)
                             <tr>
                                 <td>{{$post->title}}</td>
-                                <td>{{$post->decs}}</td>
+                                <td>{{$post->desc}}</td>
                                 <td>{{$post->created_at}}</td>
-                                <td><img src="{{asset('storage/'. $post->image)}}" style="height: 150px; width:130px">
+                                <td>
+                                    <img src="{{asset('storage/'. $post->image)}}" style="height: 150px; width:130px">
                                 </td>
                                 <td><a href="{{ route('admin.post.show',$post->id)}}" class="btn btn-success">Show</a>
                                 </td>

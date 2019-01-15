@@ -29,3 +29,4 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/list', 'PostController@list')->name('admin.post.list');
     });
 });
+

@@ -24,18 +24,30 @@ class PostController extends Controller
     }
 
 
-    public function store(StoreBlogPost $request)
+    public function store(Request $request)
     {
         $posts = new Post();
         $posts->title = $request->input('title');
-        $posts->decs = $request->input('decs');
+        $posts->desc = $request->input('desc');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
+
         if ($request->hasFile('image')) {
             $image = $request->image;
             $path = $image->store('images', 'public');
             $posts->image = $path;
         }
+
+//        if ($request->hasfile('image')) {
+//
+//            foreach ($request->file('image') as $image) {
+//                $name = $image->getClientOriginalName();
+//                $image->move(public_path() . '/upload/images/', $name);
+//                $data[] = $name;
+//            }
+//        }
+
+//        $posts->image = json_encode($data);
         $posts->save();
         Session::flash('success', 'them moi thành công');
         return redirect()->route('admin.post.index');
@@ -60,7 +72,7 @@ class PostController extends Controller
     {
         $posts = Post::findOrFail($id);
         $posts->title = $request->input('title');
-        $posts->decs = $request->input('decs');
+        $posts->desc = $request->input('desc');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
         if ($request->hasFile('image')) {
