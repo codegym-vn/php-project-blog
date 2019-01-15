@@ -37,7 +37,7 @@ class PostController extends Controller
             $posts->image = $path;
         }
         $posts->save();
-        Session::flash('success', 'them moi thành công');
+        Session::flash('success', 'Tạo mới thành công');
         return redirect()->route('admin.post.index');
     }
 

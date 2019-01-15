@@ -12,6 +12,13 @@
         <div class="container">
             <div class="col-12">
                 <h1>My Blog</h1>
+                @if(Session::has('success'))
+                    <h5 class="text-primary">{{ Session::get('success')}}</h5>
+                @endif
+
+                @if(isset($message))
+                    <h5 class="text-primary">{{ $message }}</h5>
+                @endif
                 <div class="form-group sticky-top">
                     <div class="d-flex flex-row-reverse bd-highlight">
                         <i class="icon ion-md-add"></i>
