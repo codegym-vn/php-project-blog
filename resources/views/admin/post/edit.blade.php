@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group">
                     <label>Summary:</label>
-                    <input type="text" class="form-control" name="decs" value="{{ $posts->decs }}">
+                    <input type="text" class="form-control" name="decs" value="{{ $posts->desc }}">
                 </div>
                 <textarea name="content" id="editor">
                 <div class="form-group">

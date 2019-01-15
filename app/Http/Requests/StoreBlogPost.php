@@ -16,7 +16,7 @@ class StoreBlogPost extends FormRequest
     {
         return [
             'title' => 'required|min:5|max:60',
-            'decs' => 'required|min:5|max:300',
+            'desc' => 'required|min:5|max:300',
             'content' => 'required|min:5|max:1500',
 
         ];
