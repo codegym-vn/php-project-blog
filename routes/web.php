@@ -27,6 +27,11 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/{id}/show','PostController@show')->name('admin.post.show');
         Route::get('/search', 'PostController@search')->name('admin.post.search');
         Route::get('/list', 'PostController@list')->name('admin.post.list');
+
     });
 });
+
+Route::get('users', 'UserController@edit')->name('auth.profile.edit');
+Route::patch('users/{id}/update', 'UserController@update');
+
 
