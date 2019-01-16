@@ -110,5 +110,4 @@ class PostController extends Controller
         return view('admin.post.list', compact('posts'));
     }
 
-
 }

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('blog');
+    return view('auth.passwords.changePassword');
 })->name('home');
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
@@ -29,4 +29,5 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/list', 'PostController@list')->name('admin.post.list');
     });
 });
+Route::post('/changePassword','UserController@changePassword')->name('changePassword');
 
