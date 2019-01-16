@@ -23,4 +23,6 @@ class HomeController extends Controller
         $blogs = Blog::all();
         return view('user.blog', compact('blogs'));
     }
+
+
 }
