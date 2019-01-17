@@ -11,19 +11,20 @@ class UserController extends Controller
 {
     public function edit()
     {
-        return view('auth.profile.edit');
+        $user = Auth::user();
+        return view('auth.profile.edit', compact('user'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $user = User::findOrFail($id);
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->password = $request->input('password');
-        $user->phone = $request->input('phone');
-        $user->address = $request->input('address');
+        $user = User::findOrFail(Auth::id());
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->address = $request->address;
         $user->save();
-        return back();
+
+        return back()->with('success', 'update success');
     }
 
     public function changePassword(Request $request)
