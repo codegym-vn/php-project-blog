@@ -109,5 +109,4 @@ class PostController extends Controller
         $posts = Post::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
         return view('admin.post.list', compact('posts'));
     }
-
 }
