@@ -1,8 +1,13 @@
 @extends('layouts.app')
 @section('content')
-    <form method="post" >
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    <form method="post" action="{{ route('auth.profile.update', $user->id) }}">
         @csrf
-        {{ method_field('patch') }}
+
         <div class="field is-horizontal">
             <div class="field-label is-normal">
                 <label class="label">From</label>
@@ -10,7 +15,7 @@
             <div class="field-body">
                 <div class="field">
                     <p class="control is-expanded has-icons-left">
-                        <input class="input" type="text" placeholder="Name" name="name" id="'name" >
+                        <input class="input" type="text" placeholder="Name" name="name" id="'name" value="{{$user->name}}">
                         <span class="icon is-small is-left">
           <i class="fas fa-user"></i>
         </span>
@@ -18,7 +23,7 @@
                 </div>
                 <div class="field">
                     <p class="control is-expanded has-icons-left has-icons-right">
-                        <input class="input is-success" type="email" placeholder="Email"  name="email">
+                        <input class="input is-success" type="email" placeholder="Email"  name="email" value="{{$user->email}}">
                         <span class="icon is-small is-left">
           <i class="fas fa-envelope"></i>
         </span>
@@ -28,7 +33,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div>e
 
         <div class="field is-horizontal">
             <div class="field-label"></div>
@@ -41,21 +46,8 @@
                             </a>
                         </p>
                         <p class="control is-expanded">
-                            <input class="input" type="tel" placeholder="Your phone number" name="phone" >
+                            <input class="input" type="tel" placeholder="Your phone number" name="phone" value="{{$user->phone}}">
                         </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Password</label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-danger" type="password" placeholder="e.g. Partnership opportunity">
                     </div>
                 </div>
             </div>
@@ -68,7 +60,7 @@
             <div class="field-body">
                 <div class="field">
                     <div class="control">
-                        <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                        <textarea class="textarea" placeholder="Explain how we can help you" name="address"></textarea>
                     </div>
                 </div>
             </div>
@@ -91,3 +83,19 @@
     </form>
 
 @endsection
+{{--@section('content')--}}
+    {{--<form method="post" action="{{route('users.edit', $user->user)}}">--}}
+        {{--{{ csrf_field() }}--}}
+        {{--{{ method_field('patch') }}--}}
+
+        {{--<input type="text" name="name"  value="{{ $user->name }}" >--}}
+
+        {{--<input type="email" name="email"  value="{{ $user->email }}" >--}}
+
+        {{--<input type="password" name="password" >--}}
+
+        {{--<input type="password" name="password_confirmation" >--}}
+
+        {{--<button type="submit">Send</button>--}}
+    {{--</form>--}}
+    {{--@endsection--}}

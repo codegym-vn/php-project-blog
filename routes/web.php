@@ -33,5 +33,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('changePassword', 'UserController@view')->name('auth.passwords.changePassword');
 Route::post('changePassword','UserController@changePassword')->name('changePassword');
-Route::get('users', 'UserController@edit')->name('auth.profile.edit');
-Route::patch('users/{id}/update', 'UserController@update');
+Route::get('/users', 'UserController@edit')->name('auth.profile.edit');
+Route::post('/users', 'UserController@update')->name('auth.profile.update');
+
