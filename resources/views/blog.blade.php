@@ -23,11 +23,8 @@
         </a>
     </div>
     <div class="card text-center">
-        <div class="card-header">
-            Featured
-        </div>
         <div class="card-body">
-            <h1 class="display-4">Welcome To The BLog!</h1>
+            <h1 class="display-4" style="color: #f4b0af">Welcome To The Best BLog!</h1>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <a href="http://localhost:4200/post" class="btn btn-primary">Go Blog</a>
         </div>

@@ -8,11 +8,11 @@
         <p class="display-4"><h1 style="color: navy">{{$posts->id}} : {{$posts->title}}</h1></p>
         <p class="lead">{{$posts->desc}}</p>
         <hr class="my-4">
-        <p>{!! $posts->content !!}</p>
+        <p>{!!  $posts->content !!}</p>
         <div class="text-center">
             <img src="{{ asset('storage/'. $posts->image) }}" style="height: 500px; width:600px" class="rounded"
                  alt="image blog">
         </div>
     </div>
-    <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
+    <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Back</a>
 @endsection
