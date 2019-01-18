@@ -17,6 +17,7 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
+
         $user = User::findOrFail(Auth::id());
         $user->name = $request->name;
         $user->email = $request->email;
@@ -26,6 +27,8 @@ class UserController extends Controller
 
         return back()->with('success', 'update success');
     }
+
+
 
     public function changePassword(Request $request)
     {
@@ -52,14 +55,13 @@ class UserController extends Controller
 
         return redirect()->back()->with("success", "Password changed successfully !");
 
-
-
     }
 
     public function view()
     {
         return view('auth.passwords.changePassword');
     }
+
 
 
 }
