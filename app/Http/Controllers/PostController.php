@@ -32,10 +32,15 @@ class PostController extends Controller
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
 
-        if ($request->hasFile('image')) {
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $posts->image = $path;
+        if ($request->hasFile('images')) {
+            $files = [];
+            foreach ($request->file('images') as $image) {
+//                $image = $request->image;
+                $path = $image->store('images', 'public');
+                array_push($files, $path);
+            }
+            $posts->image = $files;
+
         }
 
 //        if ($request->hasfile('image')) {
