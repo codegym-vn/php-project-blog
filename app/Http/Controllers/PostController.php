@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Http\Requests\StoreBlogPost;
+use Barryvdh\DomPDF\Facade as PDF;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -105,5 +105,14 @@ class PostController extends Controller
         }
         $posts = Post::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
         return view('admin.post.list', compact('posts'));
+    }
+   public function exportPDF($id) {
+        $post = Post::find($id);
+        $pdf = PDF::loadView('admin.post.detail', ['post' => $post]);
+        return $pdf->download('admin.post.detail.pdf');
+    }
+    public function detail($id) {
+           $post = Post::findOrFail($id);
+           return view('admin.post.detail', compact('post'));
     }
 }

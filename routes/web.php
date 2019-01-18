@@ -27,7 +27,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/{id}/show','PostController@show')->name('admin.post.show');
         Route::get('/search', 'PostController@search')->name('admin.post.search');
         Route::get('/list', 'PostController@list')->name('admin.post.list');
-
+        Route::get('/{id}/detail','PostController@detail')->name('admin.post.detail');
+        Route::get('/{id}/export-pdf', 'PostController@exportPDF')->name('post.exportPDF');
     });
 });
 
