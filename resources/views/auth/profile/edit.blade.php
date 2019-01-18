@@ -60,7 +60,7 @@
             <div class="field-body">
                 <div class="field">
                     <div class="control">
-                        <textarea class="textarea" placeholder="Explain how we can help you" name="address"></textarea>
+                        <textarea class="textarea" placeholder="Explain how we can help you" name="address">{{$user->address}}</textarea>
                     </div>
                 </div>
             </div>
@@ -83,19 +83,3 @@
     </form>
 
 @endsection
-{{--@section('content')--}}
-    {{--<form method="post" action="{{route('users.edit', $user->user)}}">--}}
-        {{--{{ csrf_field() }}--}}
-        {{--{{ method_field('patch') }}--}}
-
-        {{--<input type="text" name="name"  value="{{ $user->name }}" >--}}
-
-        {{--<input type="email" name="email"  value="{{ $user->email }}" >--}}
-
-        {{--<input type="password" name="password" >--}}
-
-        {{--<input type="password" name="password_confirmation" >--}}
-
-        {{--<button type="submit">Send</button>--}}
-    {{--</form>--}}
-    {{--@endsection--}}
