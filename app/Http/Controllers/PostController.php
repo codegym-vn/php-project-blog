@@ -28,8 +28,8 @@ class PostController extends Controller
     {
         $posts = new Post();
         $posts->title = $request->input('title');
+//        $posts->tag = $request->input('tag');
         $posts->desc = $request->input('desc');
-        $posts->genre = $request->input('genre');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
 
@@ -68,8 +68,8 @@ class PostController extends Controller
     {
         $posts = Post::findOrFail($id);
         $posts->title = $request->input('title');
+        $posts->tags = $request->input('tags');
         $posts->desc = $request->input('desc');
-        $posts->genre = $request->input('genre');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
         if ($request->hasFile('image')) {

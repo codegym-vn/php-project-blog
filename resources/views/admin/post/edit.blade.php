@@ -12,6 +12,12 @@
                     <label>Title:</label>
                     <input type="text" class="form-control" name="title" value="{{ $posts->title }}">
                 </div>
+                <div style="margin: auto;">
+                   Tags: <input name="tags" id="input-tags" placeholder="add tags" style="width: 100px  !important" />
+                </div>
+                <script type="text/javascript">
+                    $('#input-tags').tagsInput();
+                </script>
                 <div class="form-group">
                     <label>Summary:</label>
                     <input type="text" class="form-control" name="desc" value="{{ $posts->desc }}">

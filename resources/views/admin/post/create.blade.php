@@ -20,7 +20,6 @@
                 <p class="help is-danger" style="color:red; ">{{$errors->first('desc')}}</p>
             @endif
         </div>
-
         <label><h4>Content</h4></label>
         <textarea name="content" id="editor">
             <div class="form-group">
