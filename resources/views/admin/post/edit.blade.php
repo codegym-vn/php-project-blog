@@ -23,15 +23,14 @@
                 </div>
                 </textarea>
                 <div class="form-group">
-                    image
-                    @if ("images/{{ $posts->images }}")
-                        <img src="{{ asset('storage/'. $posts->image) }}" style="height: 500px; width:600px" class="rounded"
-                             alt="image blog">
+                    @if ("/upload/images/{{ $posts->images }}")
+                        <img src="{{ $posts->images }}">
                     @else
                         <p>No image found</p>
                     @endif
                     <input type="file" name="image" value="{{ $posts->images }}"/>
                 </div>
+
                 <button type="submit" class="btn btn-primary">Update</button>
                 <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
 

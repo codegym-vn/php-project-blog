@@ -13,4 +13,7 @@ class Post extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    protected $casts = [
+        'image' => 'array'];
 }

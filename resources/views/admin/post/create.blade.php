@@ -31,15 +31,8 @@
             </div>
         </textarea>
         <div class="form-group">
-            <label><h4>genre</h4></label>
-            <input name="genre" class="form-control" placeholder="genre">
-            @if($errors ->has('genre'))
-                <p class="help is-danger" style="color:red; ">{{$errors->first('desc')}}</p>
-            @endif
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlFile1"><h4>Avatar</h4></label>
-            <input type="file" class="form-control-file" name="image" multiple>
+            <label for="exampleFormControlFile1">Avatar</label>
+            <input type="file" class="form-control-file" name="images[]" multiple>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
         <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
