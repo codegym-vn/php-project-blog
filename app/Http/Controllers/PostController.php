@@ -29,6 +29,7 @@ class PostController extends Controller
         $posts = new Post();
         $posts->title = $request->input('title');
         $posts->desc = $request->input('desc');
+        $posts->genre = $request->input('genre');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
 
@@ -38,16 +39,6 @@ class PostController extends Controller
             $posts->image = $path;
         }
 
-//        if ($request->hasfile('image')) {
-//
-//            foreach ($request->file('image') as $image) {
-//                $name = $image->getClientOriginalName();
-//                $image->move(public_path() . '/upload/images/', $name);
-//                $data[] = $name;
-//            }
-//        }
-
-//        $posts->image = json_encode($data);
         $posts->save();
         Session::flash('success', 'Tạo mới thành công');
         return redirect()->route('admin.post.index');
@@ -73,6 +64,7 @@ class PostController extends Controller
         $posts = Post::findOrFail($id);
         $posts->title = $request->input('title');
         $posts->desc = $request->input('desc');
+        $posts->genre = $request->input('genre');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
         if ($request->hasFile('image')) {

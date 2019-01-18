@@ -33,7 +33,7 @@
                     </p>
                 </div>
             </div>
-        </div>e
+        </div>
 
         <div class="field is-horizontal">
             <div class="field-label"></div>

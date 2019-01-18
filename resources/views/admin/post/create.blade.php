@@ -2,26 +2,26 @@
 @section('title', 'add new')
 @section('content')
     <div class="col -12">
-        <h1>CREATE POST</h1>
+        <h2>CREATE POST</h2>
     </div>
     <form method="post" action="{{route('admin.post.store')}}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label>Title</label>
+            <label><h4>Title</h4></label>
             <input name="title" class="form-control" placeholder="title">
             @if($errors ->has('title'))
                 <p class="help is-danger" style="color:red; ">{{$errors->first('title')}}</p>
             @endif
         </div>
         <div class="form-group">
-            <label>Summary</label>
+            <label><h4>Summary</h4></label>
             <input name="desc" class="form-control" placeholder="summary">
             @if($errors ->has('desc'))
                 <p class="help is-danger" style="color:red; ">{{$errors->first('desc')}}</p>
             @endif
         </div>
 
-        <label>Content</label>
+        <label><h4>Content</h4></label>
         <textarea name="content" id="editor">
             <div class="form-group">
                 <input name="content" class="form-control">
@@ -31,7 +31,14 @@
             </div>
         </textarea>
         <div class="form-group">
-            <label for="exampleFormControlFile1">Avatar</label>
+            <label><h4>genre</h4></label>
+            <input name="genre" class="form-control" placeholder="genre">
+            @if($errors ->has('genre'))
+                <p class="help is-danger" style="color:red; ">{{$errors->first('desc')}}</p>
+            @endif
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1"><h4>Avatar</h4></label>
             <input type="file" class="form-control-file" name="image" multiple>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
