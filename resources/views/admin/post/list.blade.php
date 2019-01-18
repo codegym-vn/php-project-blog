@@ -54,6 +54,7 @@
 
                                 <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a>
                                 </td>
+                                <td><a href="{{route('post.exportPDF', $post->id)}}" class="btn btn-warning">Export</a>
                                 <td>
                                     <a href="{{ route('admin.post.destroy',$post->id) }}" class="btn btn-danger"
                                        onclick="return confirm('Bạn có muốn xoá ? ')">Delete</a>
@@ -62,9 +63,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <div class="col-6">
-                        <div class="pagination float-lg-right">{{$posts->links()}}</div>
-                    </div>
+
                 </div>
             </div>
         </div>
