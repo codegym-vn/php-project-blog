@@ -5,16 +5,25 @@
     </button>
 
     <div class="jumbotron">
-        <p class="display-4"><h1 style="color: navy">{{$posts->title}}</h1></p>
+        <p class="display-4">
+        <h1 style="color: navy">{{$posts->title}}</h1>
+        <div style="margin: auto;">
+            <input name="tags" id="input-tags" placeholder="add tags" style="width: 100px  !important" />
+        </div>
+        <script type="text/javascript">
+            $('#input-tags').tagsInput();
+        </script>
+        <p>Tag: {{$posts->tags}}</p>
         <p class="lead">{{$posts->desc}}</p>
         <hr class="my-4">
         <p>{!! $posts->body !!}</p>
         @foreach($posts as $post)
-        <div class="text-center">
-            <img src="{{ asset('storage/'. $posts->image[0]) }}" style="height: 500px; width:600px" class="rounded"
-                 alt="image blog">
-        </div>
+            <div class="text-center">
+                <img src="{{ asset('storage/'. $posts->image[0]) }}" style="height: 500px; width:600px" class="rounded"
+                     alt="image blog">
+            </div>
         @endforeach
+
     </div>
     <form method="post" action="{{route('comment.store', $posts->id)}}">
         @csrf
@@ -60,7 +69,5 @@
             </div>
         </article>
     @endforeach
-    {{--@foreach($posts->comments as $comment)--}}
-    {{--<h5>{{ $comment->body}}</h5>--}}
-    {{--@endforeach--}}
+    <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Back</a>
 @endsection

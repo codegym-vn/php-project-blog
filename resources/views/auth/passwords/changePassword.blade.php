@@ -39,11 +39,11 @@
                                 <label for="new-password" class="col-md-4 control-label">New Password</label>
 
                                 <div class="col-md-6">
-                                    <input id="new-password" type="password" class="form-control" name="new-password" required>
+                                    <input id="new-password"  type="password" class="form-control" name="new-password" required>
 
                                     @if ($errors->has('new-password'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('new-password') }}</strong>
+                                        <strong style="color: #b91d19">{{ $errors->first('new-password') }}</strong>
                                     </span>
                                     @endif
                                 </div>
