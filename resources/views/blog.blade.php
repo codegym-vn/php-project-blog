@@ -26,11 +26,9 @@
         <div class="card-body">
             <h1 class="display-4" style="color: #f4b0af">Welcome To The Best BLog!</h1>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="http://localhost:4200/post" class="btn btn-primary">Go Blog</a>
+
         </div>
-        <div class="card-body">
-            <a href="{{ route('admin.post.list') }}" class="btn btn-success">My Blog</a>
-        </div>
+
         <div class="card-footer text-muted">
                 <div class="wrapper">
                     <div class="b"><a href="#">
