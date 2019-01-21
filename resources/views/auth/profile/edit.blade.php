@@ -10,7 +10,7 @@
 
         <div class="field is-horizontal">
             <div class="field-label is-normal">
-                <label class="label">From</label>
+                <label class="label">Name</label>
             </div>
             <div class="field-body">
                 <div class="field">
@@ -47,6 +47,9 @@
                         </p>
                         <p class="control is-expanded">
                             <input class="input" type="tel" placeholder="Your phone number" name="phone" value="{{$user->phone}}">
+                        @if($errors ->has('phone'))
+                            <p class="help is-danger" style="color:red; ">{{$errors->first('phone')}}</p>
+                            @endif
                         </p>
                     </div>
                 </div>
@@ -55,7 +58,7 @@
 
         <div class="field is-horizontal">
             <div class="field-label is-normal">
-                <label class="label">address</label>
+                <label class="label">Address</label>
             </div>
             <div class="field-body">
                 <div class="field">

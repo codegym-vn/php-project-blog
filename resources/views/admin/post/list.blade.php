@@ -37,7 +37,7 @@
                             <td>Summary</td>
                             <td>Created</td>
                             <td>Avatar</td>
-                            <td colspan="3">Action</td>
+                            <td colspan="4">Action</td>
                         </tr>
                         </thead>
                         <tbody>
