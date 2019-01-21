@@ -27,7 +27,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="col-12-md">
+    <div class="col-md-12">
         <nav class="level">
             <p class="level-item has-text-centered">
                 <a class="link is-info" href="http://localhost:4200/post">Home</a>

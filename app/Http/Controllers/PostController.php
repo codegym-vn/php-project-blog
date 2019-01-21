@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\StoreBlogPost;
 use Barryvdh\DomPDF\Facade as PDF;
 use App\Post;
 use Illuminate\Http\Request;
@@ -24,7 +25,7 @@ class PostController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(StoreBlogPost $request)
     {
         $posts = new Post();
         $posts->title = $request->input('title');
