@@ -32,7 +32,25 @@
             <a href="{{ route('admin.post.list') }}" class="btn btn-success">My Blog</a>
         </div>
         <div class="card-footer text-muted">
-
+                <div class="wrapper">
+                    <div class="b"><a href="#">
+                            <img src="https://www.brandsupply.com/upload/project_files/ec456bac5ab514f7f089178b619788de.jpg" >
+                        </a></div>
+                    <div class="b"><h2>GIỚI THIỆU</h2>
+                        <p class="b">Học viện Agile</p>
+                        <p class="b">Các bài blog khác</p>
+                        <p class="b">Gửi liên hệ</p>
+                    </div>
+                    <div class="b">
+                        <h2>HỎI ĐÁP</h2>
+                        <p class="b">Về Blog</p>
+                        <p class="b">Về học viện Agile</p>
+                    </div>
+                    <div class="b"><h2>LIÊN KẾT</h2>
+                        <p class="b">HanoiSrum</p>
+                        <p class="b">Tạp trí blog lập trình</p>
+                    </div>
+                </div>
         </div>
     </div>
 @endsection

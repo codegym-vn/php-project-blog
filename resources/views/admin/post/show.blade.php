@@ -12,14 +12,9 @@
         <hr class="my-4">
         <p>{!! $posts->body !!}</p>
         @foreach($posts->image as $image)
-            {{--{{dd($image)}}--}}
             <div class="text-center">
                 <img src="{{ asset('storage/'. $image) }}" style="height: 500px; width:600px" class="rounded"
                      alt="image blog">
-                {{--<img src="{{ asset('storage/'. $posts->image[1]) }}" style="height: 500px; width:600px" class="rounded"--}}
-                     {{--alt="image blog">--}}
-                {{--<img src="{{ asset('storage/'. $posts->image[2]) }}" style="height: 500px; width:600px" class="rounded"--}}
-                     {{--alt="image blog">--}}
             </div>
         @endforeach
 

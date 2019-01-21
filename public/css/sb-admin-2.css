@@ -159,3 +159,28 @@ _:-ms-input-placeholder, :root .demo-graph {
     box-sizing: border-box;
     align-items: center;
 }
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-column-gap: 80px;
+    color:#FFFFFF;
+}
+
+a{
+    text-decoration: none;
+}
+
+p {
+    color: black;
+}
+
+image {
+    width: 120%;
+    height: 250%;
+}
+.b, h2 {
+
+    color: black;
+}
