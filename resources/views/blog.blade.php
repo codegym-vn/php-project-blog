@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-interval="10000">
@@ -24,9 +23,18 @@
     </div>
     <div class="card text-center">
         <div class="card-body">
-            <h1 class="display-4" style="color: #f4b0af">Welcome To The Best BLog!</h1>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h1 class="display-4">Welcome To The Best BLog!</h1>
 
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+                <a href="{{route('home')}}" class="btn btn-outline-secondary">Get started</a>
+                <a href="http://localhost:4200/post" class="btn btn-outline-success">Go BLog</a>
+            </div>
         </div>
 
         <div class="card-footer text-muted">
