@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('content')
     <div class="card-uper">
         <div class="card-header">
@@ -13,7 +13,8 @@
                     <input type="text" class="form-control" name="title" value="{{ $posts->title }}">
                 </div>
                 <div style="margin: auto;">
-                   Tags: <input name="tags" id="input-tags" placeholder="add tags" style="width: 100px  !important" />
+                   Tags: {{$posts->tags}}
+                    <input name="tags" id="input-tags" placeholder="edit tags" style="width: 100px  !important" />
                 </div>
                 <script type="text/javascript">
                     $('#input-tags').tagsInput();

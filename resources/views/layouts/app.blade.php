@@ -16,6 +16,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="http://cdn.ckeditor.com/ckeditor5/11.2.0/inline/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="{{asset('css/sb-admin-2.css')}}">
 
@@ -117,5 +119,17 @@
     </div>
 </div>
 </div>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                // eslint-disable-next-line max-len
+                uploadUrl: 'https://cksource.com/weuy2g4ryt278ywiue/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 </body>
 </html>
