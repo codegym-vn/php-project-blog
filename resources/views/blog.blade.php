@@ -32,7 +32,7 @@
             <a href="{{ route('admin.post.list') }}" class="btn btn-success">My Blog</a>
         </div>
         <div class="card-footer text-muted">
-            BY TEAM WFC
+
         </div>
     </div>
 @endsection
