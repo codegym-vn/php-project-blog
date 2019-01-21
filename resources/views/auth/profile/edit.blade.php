@@ -36,15 +36,12 @@
         </div>
 
         <div class="field is-horizontal">
-            <div class="field-label"></div>
+            <div class="field-label is-normal">Phone</div>
             <div class="field-body">
                 <div class="field is-expanded">
+
                     <div class="field has-addons">
-                        <p class="control">
-                            <a class="button is-static">
-                                +84
-                            </a>
-                        </p>
+
                         <p class="control is-expanded">
                             <input class="input" type="tel" placeholder="Your phone number" name="phone" value="{{$user->phone}}">
                         @if($errors ->has('phone'))
