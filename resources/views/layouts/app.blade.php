@@ -27,10 +27,25 @@
 </head>
 <body>
 <div class="container">
-    <div class="col-12-md">
-        <nav class="navbar navbar-expand-lg navbar-light flex-column flex-md-row bd-navbar sticky-top"
-             style="background: powderblue">
-            <a class="navbar-brand" href="{{route('home')}}">Blog</a>
+    <div class="col-12-md" >
+        <nav class="level">
+            <p class="level-item has-text-centered">
+                <a class="link is-info" href="http://localhost:4200/post">Home</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a class="link is-info" href="#">Menu</a>
+            </p>
+            <p class="level-item has-text-centered" style="font-size: 25px">
+                <a href="{{route('home')}}">BLOG</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a class="link is-info" href="{{ route('admin.post.list') }}">My BLog</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a class="link is-info" href="#">Contact</a>
+            </p>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light flex-column flex-md-row bd-navbar sticky-top">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,21 +55,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Menu
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#"></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"></a>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
@@ -67,7 +70,6 @@
                 </form>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
                 <ul class="navbar-nav ml-auto">
                     @guest
                         <li class="nav-item">
@@ -109,6 +111,32 @@
                         </li>
                     @endguest
                 </ul>
+            </div>
+        </nav>
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Tweets</p>
+                    <p class="title">3,456</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Following</p>
+                    <p class="title">123</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Followers</p>
+                    <p class="title">456K</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Likes</p>
+                    <p class="title">789</p>
+                </div>
             </div>
         </nav>
         <main class="py-4">
