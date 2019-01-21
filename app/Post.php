@@ -16,4 +16,8 @@ class Post extends Model
 
     protected $casts = [
         'image' => 'array'];
+    public function tag()
+    {
+        return $this->hasMany('App\Tag');
+    }
 }

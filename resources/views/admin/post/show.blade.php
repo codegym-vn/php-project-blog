@@ -7,7 +7,7 @@
     <div class="jumbotron">
         <p class="display-4">
         <h1 style="color: navy">{{$posts->title}}</h1>
-        <p class="btn btn-success">{{$posts->tags}} </p>
+        <a class="btn btn-success" href="{{route('listByTags.filter')}}">{{$posts->tags}}</a>
         <p class="lead">{{$posts->desc}}</p>
         <hr class="my-4">
         <p>{!! $posts->body !!}</p>

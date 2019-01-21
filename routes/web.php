@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/{id}/export-pdf', 'PostController@exportPDF')->name('post.exportPDF');
     });
 });
+Route::get('/list', 'TagsController@filter')->name('listByTags.filter');
 
 Route::get('changePassword', 'UserController@view')->name('auth.passwords.changePassword');
 Route::post('changePassword','UserController@changePassword')->name('changePassword');
