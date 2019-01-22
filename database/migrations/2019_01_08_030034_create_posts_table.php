@@ -13,7 +13,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('tags')->nullable();
-            $table->string('desc');
+            $table->text('desc');
             $table->text('content');
             $table->longText('image');
             $table->string('id_user')->nullable();

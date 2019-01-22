@@ -1,8 +1,8 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('content')
     <div class="card-uper">
         <div class="card-header">
-             <h1>EDIT POST</h1>
+            <h1>EDIT POST</h1>
         </div>
         <div class="card-body">
 
@@ -12,10 +12,6 @@
                     <label>Title:</label>
                     <input type="text" class="form-control" name="title" value="{{ $posts->title }}">
                 </div>
-                <div style="margin: auto;">
-                   Tags: <input name="tags" id="input-tags" placeholder="add tags" style="width: 100px  !important" />
-                </div>
-
                 <div class="form-group">
                     <label>Summary:</label>
                     <input type="text" class="form-control" name="desc" value="{{ $posts->desc }}">

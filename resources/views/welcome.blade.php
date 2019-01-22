@@ -23,7 +23,8 @@
             crossorigin="anonymous"></script>
     <script src="http://cdn.ckeditor.com/ckeditor5/11.2.0/inline/ckeditor.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
-
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="stylesheet" href="{{asset('css/sb-admin-2.css')}}">
 </head>
 <body>
 <div class="container">

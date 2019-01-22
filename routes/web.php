@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     });
 });
+Route::get('/list', 'TagsController@filter')->name('listByTags.filter');
 
 Route::get('changePassword', 'UserController@view')->name('auth.passwords.changePassword');
 Route::post('changePassword','UserController@changePassword')->name('changePassword');
