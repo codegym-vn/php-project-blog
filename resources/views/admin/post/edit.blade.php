@@ -28,12 +28,7 @@
                 </textarea>
 
                 <div class="form-group">
-                    @if ("/upload/images/{{ $posts->images }}")
-                        <img src="{{ $posts->images }}">
-                    @else
-                        <p>No image found</p>
-                    @endif
-                    <input type="file" name="image" value="{{ $posts->images }}" multiple>
+                    <input type="file" name="images[]" value="{{ $posts->images }}" multiple>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Update</button>
