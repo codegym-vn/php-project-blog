@@ -1,8 +1,6 @@
 
 @extends('layouts.app')
-
 @section('content')
-
                 <h1>My Blog</h1>
                 @if(Session::has('success'))
                     <h5 class="text-primary">{{ Session::get('success')}}</h5>

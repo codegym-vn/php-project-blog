@@ -29,8 +29,6 @@
     <p>{{$posts->desc}}</p>
     <p>{!! $posts->content !!}}</p>
     <p>{!! $posts->body !!}</p>
-
-
     </div>
     <form method="post" action="{{route('comment.store', $posts->id)}}">
         @csrf
