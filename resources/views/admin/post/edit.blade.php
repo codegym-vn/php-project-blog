@@ -2,7 +2,7 @@
 @section('content')
     <div class="card-uper">
         <div class="card-header">
-             <h1>EDIT POST</h1>
+            <h1>EDIT POST</h1>
         </div>
         <div class="card-body">
 
@@ -12,9 +12,10 @@
                     <label>Title:</label>
                     <input type="text" class="form-control" name="title" value="{{ $posts->title }}">
                 </div>
-                <div style="margin: auto;">
-                   Tags: {{$posts->tags}}
-                    <input name="tags" id="input-tags" placeholder="edit tags" style="width: 100px  !important" />
+                <label>Tags: {{$posts->tags}}</label>
+
+                <div style="width: 1300px; margin: 0px auto;">
+                    <input name="tags" class="tags-input" id="tag" style="width: 82.55%  !important"/>
                 </div>
                 <script type="text/javascript">
                     $('#input-tags').tagsInput();
