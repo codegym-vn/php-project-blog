@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('blog');
-})->name('home');
+//Route::get('/', function () {
+//    return view('blog');
+//})->name('home');
 Auth::routes();
+Route::get('/', 'PostController@view')->name('blog');
+
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'posts'], function () {
         Route::get('/create','PostController@create')->name('admin.post.create');
@@ -29,6 +31,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/list', 'PostController@list')->name('admin.post.list');
         Route::get('/{id}/detail','PostController@detail')->name('admin.post.detail');
         Route::get('/{id}/export-pdf', 'PostController@exportPDF')->name('post.exportPDF');
+
     });
 });
 Route::get('/list', 'TagsController@filter')->name('listByTags.filter');
