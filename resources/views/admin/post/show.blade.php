@@ -7,15 +7,8 @@
     <div class="jumbotron">
         <p class="display-4">
         <h1 style="color: navy">{{$posts->title}}</h1>
-        <div style="margin: auto;">
-            <input name="tags" id="input-tags" placeholder="add tags" style="width: 100px  !important" />
-        </div>
-        <script type="text/javascript">
-            $('#input-tags').tagsInput();
-        </script>
-        <p>Tag: {{$posts->tags}}</p>
-        <p class="lead">{{$posts->desc}}</p>
         <hr class="my-4">
+        <p>{!! $posts->content !!}}</p>
         <p>{!! $posts->body !!}</p>
         @foreach($posts->image as $image)
             <div class="text-center">

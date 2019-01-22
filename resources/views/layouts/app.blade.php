@@ -43,7 +43,7 @@
                             <a class="nav-link" href="https://codegymvn.slack.com/messages/DDZMMHF1V/">Content</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="{{ route('admin.post.list') }}" >
+                            <a class="nav-link">
                                 Menu
                             </a>
                         </li>
@@ -73,6 +73,10 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
+
+                                    <a class="dropdown-item" href="{{ route('admin.post.list') }}" >
+                                        New Blog
+                                    </a>
 
                                     <a class="dropdown-item" href="{{route('auth.passwords.changePassword')}}">
                                         Change password
