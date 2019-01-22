@@ -1,16 +1,8 @@
-{{--@extends('layouts.app')--}}
 
 @extends('layouts.app')
 
 @section('content')
-    <style>
-        .uper {
-            margin-top: 40px;
-        }
-    </style>
-    <div class="uper">
-        <div class="container">
-            <div class="col-12">
+
                 <h1>My Blog</h1>
                 @if(Session::has('success'))
                     <h5 class="text-primary">{{ Session::get('success')}}</h5>
@@ -31,7 +23,7 @@
                 </div>
                 <div class="row">
                     <table class="col-12 table table-striped">
-                        <thead style="background: #6cb2eb">
+                        <thead>
                         <tr class="text-center" style="font-size: 20px">
                             <td>Title</td>
                             <td>Summary</td>
@@ -46,12 +38,10 @@
                                 <td>{{$post->title}}</td>
                                 <td>{{$post->desc}}</td>
                                 <td>{{$post->created_at}}</td>
-                                <td>
-                                    <img src="{{asset('storage/'. $post->image[0])}}" style="height: 150px; width:130px">
-                                </td>
+                                <td> <img src="{{ asset('storage/'. $post->image[0]) }}" style="height: 100px; width:200px" class="rounded"
+                                          alt="image blog"></td>
                                 <td><a href="{{ route('admin.post.show',$post->id)}}" class="btn btn-success">Show</a>
                                 </td>
-
                                 <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a>
                                 </td>
                                 <td><a href="{{route('post.exportPDF', $post->id)}}" class="btn btn-warning">Export</a>
@@ -63,11 +53,7 @@
                         @endforeach
                         </tbody>
                     </table>
-
+                    {{$posts->links()}}
                 </div>
-            </div>
-        </div>
-
-    </div>
 
 @endsection

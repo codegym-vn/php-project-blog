@@ -17,9 +17,7 @@
                 <div style="width: 1300px; margin: 0px auto;">
                     <input name="tags" class="tags-input" id="tag" style="width: 82.55%  !important"/>
                 </div>
-                <script type="text/javascript">
-                    $('#input-tags').tagsInput();
-                </script>
+
                 <div class="form-group">
                     <label>Summary:</label>
                     <input type="text" class="form-control" name="desc" value="{{ $posts->desc }}">
@@ -30,13 +28,9 @@
                     <input type="text" class="form-control" name="content" value="{!!$posts->content!!}">
                 </div>
                 </textarea>
+
                 <div class="form-group">
-                    @if ("/upload/images/{{ $posts->images }}")
-                        <img src="{{ $posts->images }}">
-                    @else
-                        <p>No image found</p>
-                    @endif
-                    <input type="file" name="image" value="{{ $posts->images }}"/>
+                    <input type="file" name="images[]" value="{{ $posts->images }}" multiple>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Update</button>

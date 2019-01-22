@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-interval="10000">
@@ -24,31 +23,83 @@
     </div>
     <div class="card text-center">
         <div class="card-body">
-            <h1 class="display-4" style="color: #f4b0af">Welcome To The Best BLog!</h1>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h1 class="display-4">Welcome To The Best BLog!</h1>
 
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+                <a href="{{route('home')}}" class="btn btn-outline-secondary">Get started</a>
+                <a href="http://localhost:4200/post" class="btn btn-outline-success">Go BLog</a>
+            </div>
         </div>
 
-        <div class="card-footer text-muted">
-                <div class="wrapper">
-                    <div class="b"><a href="#">
-                            <img src="https://www.brandsupply.com/upload/project_files/ec456bac5ab514f7f089178b619788de.jpg" >
-                        </a></div>
-                    <div class="b"><h2>GIỚI THIỆU</h2>
-                        <p class="b">Học viện Agile</p>
-                        <p class="b">Các bài blog khác</p>
-                        <p class="b">Gửi liên hệ</p>
-                    </div>
-                    <div class="b">
-                        <h2>HỎI ĐÁP</h2>
-                        <p class="b">Về Blog</p>
-                        <p class="b">Về học viện Agile</p>
-                    </div>
-                    <div class="b"><h2>LIÊN KẾT</h2>
-                        <p class="b">HanoiSrum</p>
-                        <p class="b">Tạp trí blog lập trình</p>
+        <div class="card-body">
+            <div class="d-flex flex-wrap">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Secondary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Success card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Danger card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dark card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Warning card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Info card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Light card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card-footer text-muted">
         </div>
     </div>
 @endsection
