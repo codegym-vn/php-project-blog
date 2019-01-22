@@ -32,17 +32,17 @@
                 <hr class="my-4">
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
 
-                <a href="{{route('home')}}" class="btn btn-outline-secondary">Get started</a>
+                <a href="{{route('blog')}}" class="btn btn-outline-secondary">Get started</a>
                 <a href="http://localhost:4200/post" class="btn btn-outline-success">Go BLog</a>
             </div>
         </div>
-
+@foreach($posts as $post)
         <div class="card-body">
             <div class="d-flex flex-wrap">
                 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
+                    <div class="card-header">{{$post->title}}</div>
                     <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
+                        <h5 class="card-title">{{$post->desc}}</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
@@ -96,11 +96,55 @@
                     </div>
                 </div>
             </div>
-
+@endforeach
 
         </div>
+    <div class="col-md-12" style="background: #1d68a7">
+        <div class="d-flex justify-content-around">
+            <div class="col-md-4">
+                <div>
+                    <div class="card-body">
+                        <h5>Giới Thiệu</h5>
+                        <a class="card-text">Về Blog</a>
+                        <br>
+                        <a class="card-text">Sản Phẩm về BLOG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <div class="card-body">
+                        <h5>Cộng Đồng</h5>
+                        <a class="card-text">Fanpage</a>
+                        <br>
+                        <a class="card-text">Nhóm Tác Giả</a>
+                        <br>
+                        <a class="card-text">Blogger</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <div class="card-body">
+                        <h5>Tài Nguyên</h5>
+                        <a class="card-text">Blog</a>
+                        <br>
+                        <a class="card-text">Tạp chí BLOG</a>
+                        <br>
+                        <a class="card-text">Tạp chí PlayBoy</a>
+                        <br>
+                        <a class="card-text">BLog Codegym</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card text-center">
         <div class="card-footer text-muted">
+            BY TEAM WFC
+
         </div>
+
     </div>
 @endsection
 
