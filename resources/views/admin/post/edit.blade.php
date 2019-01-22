@@ -12,12 +12,6 @@
                     <label>Title:</label>
                     <input type="text" class="form-control" name="title" value="{{ $posts->title }}">
                 </div>
-                <label>Tags: {{$posts->tags}}</label>
-
-                <div style="width: 1300px; margin: 0px auto;">
-                    <input name="tags" class="tags-input" id="tag" style="width: 82.55%  !important"/>
-                </div>
-
                 <div class="form-group">
                     <label>Summary:</label>
                     <input type="text" class="form-control" name="desc" value="{{ $posts->desc }}">
