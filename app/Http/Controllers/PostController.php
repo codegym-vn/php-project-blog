@@ -115,4 +115,10 @@ class PostController extends Controller
            $post = Post::findOrFail($id);
            return view('admin.post.detail', compact('post'));
     }
+
+    public function view()
+    {
+        $posts = Post::all();
+        return view('blog', compact('posts'));
+    }
 }

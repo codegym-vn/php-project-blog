@@ -184,3 +184,7 @@ image {
 
     color: black;
 }
+
+.col-md-4 .card-body {
+    color: white;
+}
