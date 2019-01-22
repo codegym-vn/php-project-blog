@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\StoreBlogPost;
-use Barryvdh\DomPDF\Facade as PDF;
 use App\Post;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -29,7 +29,6 @@ class PostController extends Controller
     {
         $posts = new Post();
         $posts->title = $request->input('title');
-//        $posts->tag = $request->input('tag');
         $posts->desc = $request->input('desc');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
@@ -46,7 +45,7 @@ class PostController extends Controller
         }
 
         $posts->save();
-        Session::flash('success', 'Tạo mới thành công');
+        Session::flash('success', 'Tạo mới bài viết thành công');
         return redirect()->route('admin.post.index');
     }
 
@@ -79,7 +78,7 @@ class PostController extends Controller
             $posts->image = $path;
         }
         $posts->save();
-        Session::flash('success', 'Cập nhật khách hàng thành công');
+        Session::flash('success', 'Cập nhật bài viết thành công');
         return redirect()->route('admin.post.index');
     }
 
@@ -88,7 +87,7 @@ class PostController extends Controller
     {
         $posts = Post::findOrFail($id);
         $posts->delete();
-        Session::flash('success', 'Xóa khách hàng thành công');
+        Session::flash('success', 'Xóa bài viết thành công');
         return redirect()->route('admin.post.index');
     }
 
