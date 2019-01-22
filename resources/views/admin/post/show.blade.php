@@ -8,9 +8,15 @@
         <p class="display-4">
         <h1 style="color: navy">{{$posts->title}}</h1>
         <hr class="my-4">
+        <p>{{$posts->desc}}</p>
         <p>{!! $posts->content !!}}</p>
         <p>{!! $posts->body !!}</p>
         @foreach($posts->image as $image)
+            @if ("/storage{{ $posts->images }}")
+                <img src="{{ $posts->images }}">
+            @else
+                <p>No image found</p>
+            @endif
             <div class="text-center">
                 <img src="{{ asset('storage/'. $image) }}" style="height: 500px; width:600px" class="rounded"
                      alt="image blog">

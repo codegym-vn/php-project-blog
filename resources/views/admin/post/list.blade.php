@@ -28,6 +28,7 @@
                             <td>Title</td>
                             <td>Summary</td>
                             <td>Created</td>
+                            <td>Avatar</td>
                             <td colspan="4">Action</td>
                         </tr>
                         </thead>
@@ -37,6 +38,8 @@
                                 <td>{{$post->title}}</td>
                                 <td>{{$post->desc}}</td>
                                 <td>{{$post->created_at}}</td>
+                                <td> <img src="{{ asset('storage/'. $post->image[0]) }}" style="height: 100px; width:200px" class="rounded"
+                                          alt="image blog"></td>
                                 <td><a href="{{ route('admin.post.show',$post->id)}}" class="btn btn-success">Show</a>
                                 </td>
                                 <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a>
