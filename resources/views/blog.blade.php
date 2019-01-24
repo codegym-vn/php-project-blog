@@ -44,8 +44,8 @@
                     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header">{{$post->title}}</div>
                         <div class="card-body">
-                            <h5 class="card-title">{{$post->desc}}</h5>
-                            <p class="card-text">{!! $post->content !!}</p>
+                            <h3 class="card-title">{{$post->desc}}</h3>
+                            {{--<p class="card-text">{!! $post->content !!}</p>--}}
                         </div>
                     </div>
                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
@@ -149,8 +149,8 @@
                 </div>
             </div>
             <div class="card text-center">
-                <div class="card-footer text-muted">
-                    BY TEAM WFC
+                <div class="card-body">
+                    <h2>BY TEAM WFC</h2>
                 </div>
             </div>
 @endsection
