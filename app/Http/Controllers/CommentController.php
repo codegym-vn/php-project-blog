@@ -4,17 +4,8 @@ namespace App\Http\Controllers;
 use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
 class CommentController extends Controller
 {
-//    public function index()
-//    {
-//        $comments = Comment::all();
-//        return view('admin.post.show', compact('comments'));
-//
-//    }
-
-
     public function store(Request $request, $id)
     {
         $comments = new Comment();
@@ -23,8 +14,7 @@ class CommentController extends Controller
         $comments->post_id =  $id;
         $comments->save();
 
-       return redirect()->route('admin.post.show', $id);
+        return redirect()->route('admin.post.show', $id);
 
     }
-
 }

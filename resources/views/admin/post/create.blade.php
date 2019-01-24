@@ -31,7 +31,7 @@
         </textarea>
         <div class="form-group">
             <label for="exampleFormControlFile1">Avatar</label>
-            <input type="file" class="form-control-file" name="images[]" multiple>
+            <input type="file" class="form-control-file" name="image">
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
         <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>

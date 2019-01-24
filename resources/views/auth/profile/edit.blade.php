@@ -5,6 +5,7 @@
             {{ session('success') }}
         </div>
     @endif
+    <div style="margin-top: 15px">
     <form method="post" action="{{ route('auth.profile.update', $user->id) }}">
         @csrf
 
@@ -81,5 +82,5 @@
             </div>
         </div>
     </form>
-
+    </div>
 @endsection

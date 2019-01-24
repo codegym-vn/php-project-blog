@@ -34,14 +34,12 @@ Route::group(['prefix' => 'admin'], function () {
 
     });
 });
-Route::get('/list', 'TagsController@filter')->name('listByTags.filter');
+//Route::get('/list', 'TagsController@filter')->name('listByTags.filter');
 
 Route::get('changePassword', 'UserController@view')->name('auth.passwords.changePassword');
 Route::post('changePassword','UserController@changePassword')->name('changePassword');
 Route::get('/users', 'UserController@edit')->name('auth.profile.edit');
 Route::post('/users', 'UserController@update')->name('auth.profile.update');
-
-//Route::get('download-pdf', 'UserController@downloadPDF')->name('download-pdf');
 
 Route::get('/submit', 'CommentController@create')->name('submit.create');
 Route::post('/comment/{id}/store', 'CommentController@store')->name('comment.store');

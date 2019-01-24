@@ -26,7 +26,7 @@ class UserController extends Controller
         $user->address = $request->address;
         $user->save();
 
-        return back()->with('success', 'update success');
+        return back()->with('success', 'Cập nhật profile thành công');
     }
 
 

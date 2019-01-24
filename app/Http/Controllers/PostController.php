@@ -33,15 +33,10 @@ class PostController extends Controller
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
 
-        if ($request->hasFile('images')) {
-            $files = [];
-            foreach ($request->file('images') as $image) {
-//                $image = $request->image;
-                $path = $image->store('images', 'public');
-                array_push($files, $path);
-            }
-            $posts->image = $files;
-
+        if ($request->hasFile('image')) {
+            $image = $request->image;
+            $path = $image->store('images', 'public');
+            $posts->image = $path;
         }
 
         $posts->save();
@@ -50,7 +45,8 @@ class PostController extends Controller
     }
 
 
-    public function show($id)
+    public
+    function show($id)
     {
         $posts = Post::findOrFail($id);
         return view('admin.post.show', compact('posts'));
@@ -68,7 +64,6 @@ class PostController extends Controller
     {
         $posts = Post::findOrFail($id);
         $posts->title = $request->input('title');
-        $posts->tags = $request->input('tags');
         $posts->desc = $request->input('desc');
         $posts->content = $request->input('content');
         $posts->id_user = $request->input('id_user');
@@ -106,14 +101,18 @@ class PostController extends Controller
         $posts = Post::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
         return view('admin.post.list', compact('posts'));
     }
-   public function exportPDF($id) {
+
+    public function exportPDF($id)
+    {
         $post = Post::find($id);
         $pdf = PDF::loadView('admin.post.detail', ['post' => $post]);
         return $pdf->download('admin.post.detail.pdf');
     }
-    public function detail($id) {
-           $post = Post::findOrFail($id);
-           return view('admin.post.detail', compact('post'));
+
+    public function detail($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('admin.post.detail', compact('post'));
     }
 
     public function view()
