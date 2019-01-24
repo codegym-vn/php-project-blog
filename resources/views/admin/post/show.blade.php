@@ -13,23 +13,17 @@
                     </h1>
                     {{$posts->created_at}}
                 </div>
-                @foreach($posts->image as $image)
-                    @if ("/storage{{ $posts->images }}")
-                        <img src="{{ $posts->images }}">
-        @else
-            <p>No image found</p>
-        @endif
+
         <div class="float-right col-3">
-            <img src="{{ asset('storage/'. $image) }}" style="height: 140px; width:200px" class="rounded"
-                 alt="image blog">
+            <img src="{{ asset('storage/'. $posts->image) }}" style="height: 100px; width:200px">
+
         </div>
-        @endforeach
+
     </div>
     <hr class="my-4">
     <p>{{$posts->desc}}</p>
-    <p>{!! $posts->content !!}}</p>
+    <p>{!! $posts->content !!}</p>
     <p>{!! $posts->body !!}</p>
-
 
     </div>
     <form method="post" action="{{route('comment.store', $posts->id)}}">
