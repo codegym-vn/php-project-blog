@@ -106,8 +106,7 @@
                             </div>
                         </div>
                         @endforeach
-
-                    </div>
+                </div>
                     <div class="col-md-12" style="background: #1d68a7">
                         <div class="d-flex justify-content-around">
                             <div class="col-md-4">
