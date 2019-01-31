@@ -36,7 +36,7 @@
                     </td>
                     <td>{{$post->desc}}</td>
                     <td>{{$post->created_at}}</td>
-                    <td><img src="{{ asset('storage/'. $post->image) }}" style="height: 100px; width:200px"
+                    <td><img src="{{ asset('storage/'. $post->image) }}" style="height: 100px; width:100px"
                         ></td>
                     <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a>
                     </td>
