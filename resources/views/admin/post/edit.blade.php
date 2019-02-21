@@ -26,7 +26,18 @@
                 <div class="form-group">
                     <input type="file" class="form-control-file" name="image" value="{{ $posts->images }}">
                 </div>
-
+                <div class="form-group">
+                    <label>Tỉnh thành</label>
+                    <select class="form-control" name="catogory_id">
+                        @foreach($catogories as $catogory)
+                            <option
+                                    @if($posts->catogory_id == $catogory->id)
+                                    {{"selected"}}
+                                    @endif
+                                    value="{{$catogory->id}}">{{$catogory->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-primary">Update</button>
                 <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
 

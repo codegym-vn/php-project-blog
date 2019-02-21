@@ -22,8 +22,7 @@
     </div>
     <hr class="my-4">
     <p>{{$posts->desc}}</p>
-    <p>{!! $posts->content !!}</p>
-    <p>{!! $posts->body !!}</p>
+    <p>{!!$posts->content!!}</p>
 
     </div>
     <form method="post" action="{{route('comment.store', $posts->id)}}">

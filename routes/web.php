@@ -43,3 +43,12 @@ Route::post('/users', 'UserController@update')->name('auth.profile.update');
 
 Route::get('/submit', 'CommentController@create')->name('submit.create');
 Route::post('/comment/{id}/store', 'CommentController@store')->name('comment.store');
+Route::group(['prefix' => 'catogories'], function () {
+    Route::get('/','CatogoryController@index')->name('catogories.index');
+    Route::get('/create','CatogoryController@create')->name('catogories.create');
+    Route::post('/create','CatogoryController@store')->name('catogories.store');
+    Route::get('/{id}/edit','CatogoryController@edit')->name('catogories.edit');
+    Route::post('/edit/{id}','CatogoryController@update')->name('catogories.update');
+    Route::get('/{id}/delete','CatogoryController@destroy')->name('catogories.destroy');
+    Route::get('/list', 'CatogoryController@list')->name('catogories.list');
+});
