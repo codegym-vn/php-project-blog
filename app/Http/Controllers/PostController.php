@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Catogory;
 use App\Http\Requests\StoreBlogPost;
 use App\Post;
 use Barryvdh\DomPDF\Facade as PDF;
@@ -15,13 +15,15 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('created_at', 'desc')->paginate(3);
-        return view('admin.post.list', compact('posts'));
+        $catogories = Catogory::all();
+        return view('admin.post.list', compact('posts', 'catogories'));
     }
 
 
     public function create()
     {
-        return view('admin.post.create');
+        $catogories = Catogory::all();
+        return view('admin.post.create', compact('catogories'));
     }
 
 
@@ -31,8 +33,8 @@ class PostController extends Controller
         $posts->title = $request->input('title');
         $posts->desc = $request->input('desc');
         $posts->content = $request->input('content');
-        $posts->id_user = $request->input('id_user');
-
+        $posts->user_id = $request->input('user_id');
+        $posts->catogory_id = $request->input('catogory_id');
         if ($request->hasFile('image')) {
             $image = $request->image;
             $path = $image->store('images', 'public');
@@ -56,7 +58,8 @@ class PostController extends Controller
     public function edit($id)
     {
         $posts = Post::findOrFail($id);
-        return view('admin.post.edit', compact('posts'));
+        $catogories = Catogory::all();
+        return view('admin.post.edit', compact('posts','catogories'));
     }
 
 
@@ -66,7 +69,8 @@ class PostController extends Controller
         $posts->title = $request->input('title');
         $posts->desc = $request->input('desc');
         $posts->content = $request->input('content');
-        $posts->id_user = $request->input('id_user');
+        $posts->user_id = $request->input('user_id');
+        $posts->catogory_id = $request->input('catogory_id');
         if ($request->hasFile('image')) {
             $image = $request->image;
             $path = $image->store('images', 'public');

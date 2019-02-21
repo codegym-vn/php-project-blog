@@ -26,6 +26,7 @@
                 <td>Summary</td>
                 <td>Created</td>
                 <td>Avatar</td>
+                <td>Catogory</td>
                 <td colspan="4">Action</td>
             </tr>
             </thead>
@@ -38,6 +39,7 @@
                     <td>{{$post->created_at}}</td>
                     <td><img src="{{ asset('storage/'. $post->image) }}" style="height: 100px; width:100px"
                         ></td>
+                    <td>{{$post->catogory->name}}</td>
                     <td><a href="{{ route('admin.post.edit',$post->id)}}" class="btn btn-primary">Edit</a>
                     </td>
                     <td><a href="{{route('post.exportPDF', $post->id)}}" class="btn btn-warning">Export</a>

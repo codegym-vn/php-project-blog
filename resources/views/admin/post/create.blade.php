@@ -33,6 +33,14 @@
             <label for="exampleFormControlFile1">Avatar</label>
             <input type="file" class="form-control-file" name="image">
         </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Tỉnh thành</label>
+            <select class="form-control" name="catogory_id">
+                @foreach($catogories as $catogory)
+                    <option value="{{ $catogory->id }}">{{ $catogory->name }}</option>
+                @endforeach
+            </select>
+        </div>
         <button type="submit" class="btn btn-primary">Create</button>
         <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
     </form>
