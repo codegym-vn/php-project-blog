@@ -6,7 +6,7 @@
         </div>
     @endif
     <div style="margin-top: 15px">
-    <form method="post" action="{{ route('auth.profile.update', $user->id) }}">
+    <form method="post" action="{{ route(PROFILE_UPDATE, $user->id) }}">
         @csrf
 
         <div class="field is-horizontal">

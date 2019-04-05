@@ -19,7 +19,7 @@
                                 </div>
                             @endif
 
-                            <form class="form-horizontal" method="POST" action="{{ route('changePassword') }}">
+                            <form class="form-horizontal" method="POST" action="{{ route(CHANGEPASSWORD) }}">
                                 {{ csrf_field() }}
 
                                 <div class="form-group{{ $errors->has('current-password') ? ' has-error' : '' }}">
