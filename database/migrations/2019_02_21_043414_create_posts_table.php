@@ -21,8 +21,8 @@ class CreatePostsTable extends Migration
             $table->longText('image');
             $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('catogory_id')->unsigned();
-            $table->foreign('catogory_id')->references('id')->on('catogories');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

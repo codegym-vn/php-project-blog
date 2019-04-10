@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Catogory;
-use App\Http\Requests\StoreBlogPost;
+use App\Category;
 use App\Post;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
@@ -15,35 +14,29 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('created_at', 'desc')->paginate(3);
-        $catogories = Catogory::all();
-        return view('admin.post.list', compact('posts', 'catogories'));
+        $categories = Category::all();
+        return view('admin.post.list', compact('posts', 'categories'));
     }
 
 
     public function create()
     {
-        $catogories = Catogory::all();
-        return view('admin.post.create', compact('catogories'));
+        $categories = Category::all();
+        return view('admin.post.create', compact('categories'));
     }
 
 
-    public function store(StoreBlogPost $request)
+    public function store(Request $request)
     {
-        $posts = new Post();
-        $posts->title = $request->input('title');
-        $posts->desc = $request->input('desc');
-        $posts->content = $request->input('content');
-        $posts->user_id = $request->input('user_id');
-        $posts->catogory_id = $request->input('catogory_id');
-        if ($request->hasFile('image')) {
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $posts->image = $path;
+        $request = $request->toArray();
+        unset($request['_token']);
+        $createPost = Post::insert($request);
+        if ($createPost) {
+            Session::flash("success", 'Tao moi thanh cong');
+        } else {
+            Session::flash("errors", 'Tao moi k thanh cong');
         }
-
-        $posts->save();
-        Session::flash('success', 'Tạo mới bài viết thành công');
-        return redirect()->route('admin.post.index');
+        return redirect()->route('admin.post.list');
     }
 
 
@@ -58,27 +51,22 @@ class PostController extends Controller
     public function edit($id)
     {
         $posts = Post::findOrFail($id);
-        $catogories = Catogory::all();
-        return view('admin.post.edit', compact('posts','catogories'));
+        $categories = Category::all();
+        return view('admin.post.edit', compact('posts','categories'));
     }
 
 
     public function update(Request $request, $id)
     {
-        $posts = Post::findOrFail($id);
-        $posts->title = $request->input('title');
-        $posts->desc = $request->input('desc');
-        $posts->content = $request->input('content');
-        $posts->user_id = $request->input('user_id');
-        $posts->catogory_id = $request->input('catogory_id');
-        if ($request->hasFile('image')) {
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $posts->image = $path;
+        $request = $request->toArray();
+        unset($request['_token']);
+        $editPost = Post::where('id', $id)->update($request);
+        if ($editPost) {
+            Session::flash('success', "Update thanh cong");
+        } else {
+            Session::flash('error', "Update khong thanh cong");
         }
-        $posts->save();
-        Session::flash('success', 'Cập nhật bài viết thành công');
-        return redirect()->route('admin.post.index');
+        return redirect()->route('admin.post.list');
     }
 
 

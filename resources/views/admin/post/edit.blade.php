@@ -6,7 +6,7 @@
         </div>
         <div class="card-body">
 
-            <form method="post" action="{{ route('admin.post.update', $posts->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.post.update', $posts->id) }}" enctype="multipart/form-data" id="editForm">
                 @csrf
                 <div class="form-group">
                     <label>Title:</label>

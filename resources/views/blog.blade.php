@@ -44,7 +44,7 @@
                                     New Blog
                                 </a>
                                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                   href="{{route(CHANGEPASSWORD)}}">
+                                   href="{{route(CHANGE_PASSWORD)}}">
                                     Change password
                                 </a>
                                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
