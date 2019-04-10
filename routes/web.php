@@ -37,7 +37,7 @@ Route::group(['prefix' => 'admin'], function () {
 //Route::get('/list', 'TagsController@filter')->name('listByTags.filter');
 
 Route::get('changePassword', 'UserController@view');
-Route::post('changePassword','UserController@changePassword')->name(CHANGEPASSWORD);
+Route::post('changePassword','UserController@changePassword')->name(CHANGE_PASSWORD);
 Route::get('/users', 'UserController@edit')->name('auth.profile.edit');
 Route::post('/users', 'UserController@update')->name(PROFILE_UPDATE);
 

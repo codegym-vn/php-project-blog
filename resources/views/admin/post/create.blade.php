@@ -4,7 +4,7 @@
     <div class="col -12">
         <h2>CREATE POST</h2>
     </div>
-    <form method="post" action="{{route('admin.post.store')}}" enctype="multipart/form-data">
+    <form method="post" action="{{route('admin.post.store')}}" enctype="multipart/form-data" id="formDemo">
         @csrf
         <div class="form-group">
             <label><h4>Title</h4></label>
@@ -42,6 +42,6 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
-        <a href="{{route('admin.post.index')}}" class="btn btn-secondary">Cancel</a>
+        <a href="{{route(POST_LIST)}}" class="btn btn-secondary">Cancel</a>
     </form>
 @endsection

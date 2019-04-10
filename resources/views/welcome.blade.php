@@ -5,27 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{asset('css/form-create.css')}}">
+    <script src="{{asset('js/jquery-3.3.1.js')}}">
+    </script>
+    <script
+            src="{{asset('js/jquery.validate.js')}}"
+    ></script>
 </head>
 <body>
 <div class="container">
-<div class="col-md-12">
-    @yield('content')
+    <div class="col-md-12">
+        @yield('content')
+    </div>
 </div>
-
-</div>
-
-
-<script>
-    ClassicEditor
-        .create(document.querySelector('#editor'), {
-            ckfinder: {
-                // eslint-disable-next-line max-len
-                uploadUrl: 'https://cksource.com/weuy2g4ryt278ywiue/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
-            }
-        })
-        .catch(error => {
-            console.error(error);
-        });
-</script>
+<script src="{{asset('js/form-validate.js')}}"></script>
+<script src="{{asset('js/edit-validate.js')}}"></script>
 </body>
 </html>
