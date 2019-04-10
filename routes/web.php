@@ -24,11 +24,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/edit/{id}','PostController@edit')->name(POST_EDIT);
         Route::post('/edit/{id}','PostController@update')->name(POST_UPDATE);
         Route::get('/destroy/{id}','PostController@destroy')->name(POST_DESTROY);
-        Route::get('/','PostController@index');
         Route::get('/view','PostController@view');
         Route::get('/{id}/show','PostController@show')->name(POST_SHOW);
 //        Route::get('/search', 'PostController@search');
-        Route::get('/list', 'PostController@list')->name(POST_LIST);
+        Route::get('/list', 'PostController@index')->name(POST_LIST);
         Route::get('/{id}/detail','PostController@detail')->name(POST_DETAIL);
         Route::get('/{id}/export-pdf', 'PostController@exportPDF')->name('post.exportPDF');
 
